@@ -66,11 +66,11 @@ function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-[#18160F]/10 bg-white/90 p-5 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#18160F]/50">Experience</p>
-                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">Finance &amp; ops co-ops</p>
+                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">3 co-ops + 2 internships</p>
               </div>
               <div className="rounded-2xl border border-[#18160F]/10 bg-white/90 p-5 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#18160F]/50">Focus Areas</p>
-                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">ML, Risk, Web</p>
+                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">Risk, Ops, Analytics</p>
               </div>
             </div>
             <div className="rounded-2xl border border-emerald-300 bg-emerald-50 px-5 py-4 shadow-[0_0_0_3px_rgba(16,185,129,0.10)]">
@@ -79,8 +79,7 @@ function About() {
                 Available June 2026
               </div>
               <p className="mt-2 text-sm leading-6 text-[#18160F]/70">
-                Open to full-time roles in data engineering, analytics, and
-                quantitative finance.
+                Open to full-time roles in operations, strategy, and analytics.
               </p>
             </div>
           </div>
@@ -92,35 +91,35 @@ function About() {
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Experience</p>
           <h2 className="mt-3 font-heading text-3xl text-[#18160F]">
-            Recent co-op roles
+            Recent experience
           </h2>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
           <article className="rounded-[1.75rem] border border-[#18160F]/8 bg-white p-8 shadow-sm">
             <div className="flex items-center justify-between gap-4">
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Arrowstreet Capital</span>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">2024–2025</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Jul 2025 – Dec 2025</span>
             </div>
             <h3 className="mt-5 font-heading text-2xl text-[#18160F]">
-              Operational Risk Co-op
+              Operational Risk &amp; Control Co-op
             </h3>
             <p className="mt-3 text-[1.0625rem] leading-7 text-[#18160F]/70">
-              Managed operational risk monitoring processes and built supporting
-              reporting tools for a quantitative investment management firm.
+              Managed operational risk monitoring, KYC onboarding, and compliance
+              testing for a quantitative investment management firm.
             </p>
           </article>
           <article className="rounded-[1.75rem] border border-[#18160F]/8 bg-white p-8 shadow-sm">
             <div className="flex items-center justify-between gap-4">
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Scotiabank</span>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">2023–2024</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Jul 2024 – Dec 2024</span>
             </div>
             <h3 className="mt-5 font-heading text-2xl text-[#18160F]">
               Governance &amp; Reporting Co-op
             </h3>
             <p className="mt-3 text-[1.0625rem] leading-7 text-[#18160F]/70">
               Supported governance and reporting workflows across global banking
-              operations, maintaining data quality standards across multiple
-              divisions.
+              operations, executing RCSAs and maintaining data quality standards
+              across multiple divisions.
             </p>
           </article>
         </div>
@@ -130,9 +129,9 @@ function About() {
       <section className="mt-12">
         <div className="divide-y divide-[#18160F]/8 rounded-[1.75rem] border border-[#18160F]/8 bg-white shadow-sm overflow-hidden">
           {[
-            { label: 'Finance / Risk', values: 'Operational Risk · KYC/AML · Regulatory Reporting · Bayesian ML' },
-            { label: 'Tools', values: 'sklearn · brms · FastAPI · React · PostgreSQL' },
-            { label: 'Languages', values: 'Python · R · SQL · Java' },
+            { label: 'Finance / Risk', values: 'Operational Risk · KYC/AML · Regulatory Reporting · RCSAs' },
+            { label: 'Tools', values: 'Tableau · Jira · Excel · Pandas · Plotly · Polars · R' },
+            { label: 'Languages', values: 'Python · SQL · R · Java' },
           ].map((row) => (
             <div key={row.label} className="grid grid-cols-[140px_1fr] gap-6 px-8 py-4 sm:grid-cols-[180px_1fr]">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#18160F]/45 self-center">
@@ -148,9 +147,9 @@ function About() {
       <section className="mt-12 rounded-[2rem] bg-[#0D7377] px-8 py-10 text-white shadow-[0_24px_64px_rgba(26,61,224,0.20)]">
         <p className="text-xs uppercase tracking-[0.35em] text-[#A8D5D7]">Education</p>
         <p className="mt-4 font-heading text-2xl leading-snug sm:text-3xl">
-          Northeastern University — B.S. Data Science &amp; Business Administration
+          Northeastern University, D'Amore-McKim — B.S. Data Science &amp; Business Administration, Cum Laude
         </p>
-        <p className="mt-2 text-sm text-[#A8D5D7]">2022–2026 · Boston, MA</p>
+        <p className="mt-2 text-sm text-[#A8D5D7]">May 2026 · Boston, MA · GPA 3.55</p>
       </section>
     </div>
   );

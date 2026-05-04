@@ -19,7 +19,7 @@ const projects: Project[] = [
     description:
       'A machine-learning system that identifies fraudulent or "ghost" Airbnb listings in New York City using Bayesian classification and a from-scratch neural network, with an interactive Shiny dashboard for exploration.',
     tech: ['Python', 'R', 'Bayesian ML', 'R Shiny', 'NumPy'],
-    liveUrl: '#',
+    liveUrl: 'https://airbnb-analysis-ds4420.shinyapps.io/Ghost-Listings-AirBNB/',
     githubUrl: '#',
     steps: [
       {
@@ -95,8 +95,8 @@ const projects: Project[] = [
     description:
       'An end-to-end analytics project exploring the relationship between gaming behaviour and self-reported mental health outcomes using clustering, association rules, and interactive Quarto reporting.',
     tech: ['Python', 'Polars', 'Plotly', 'K-Means', 'Quarto'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://drive.google.com/file/d/1T0AFqq5DoMQKSi3yU1m0RmdpnrE6P-EE/view?usp=sharing',
+    githubUrl: 'https://drive.google.com/file/d/1w_jZ4g3gJs37fZd8sE4lFxSliXLNKHOo/view?usp=sharing',
     steps: [
       {
         title: 'Data pipeline',

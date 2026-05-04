@@ -1,34 +1,45 @@
 const NAV_ITEMS = [
-  { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Additional', href: '#additional' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
 ];
 
-const SKILLS = [
-  { category: 'Languages', values: 'Python, R, TypeScript, SQL, Java' },
-  { category: 'Data & ML', values: 'Polars, NumPy, scikit-learn, Bayesian Methods, K-Means, NLP' },
-  { category: 'Web & Tools', values: 'React, FastAPI, PostgreSQL, ChromaDB, Vercel, Git' },
-  { category: 'Finance / Risk', values: 'Operational Risk Frameworks, Regulatory Reporting, Data Ops' },
-];
+function Section({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
+  return (
+    <section id={id}>
+      <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">{label}</p>
+      <div className="mt-8">{children}</div>
+    </section>
+  );
+}
 
-const PROJECTS_BRIEF = [
-  {
-    name: 'NYC Airbnb Ghost Listing Detector',
-    tech: 'Python · R · Bayesian ML · R Shiny · NumPy',
-    desc: 'Identifies fraudulent Airbnb listings using Bayesian classification and a from-scratch neural network, deployed as an interactive Shiny dashboard.',
-  },
-  {
-    name: 'Surplus Connect',
-    tech: 'FastAPI · React · PostgreSQL · ChromaDB · Vercel',
-    desc: 'Full-stack platform matching food-surplus donors to nonprofits via semantic vector search and real-time availability tracking.',
-  },
-  {
-    name: 'Gaming & Mental Health Analytics',
-    tech: 'Python · Polars · Plotly · K-Means · Quarto',
-    desc: 'End-to-end analytics pipeline exploring correlations between gaming behaviour and mental-health outcomes, published as an interactive Quarto report.',
-  },
-];
+function Role({
+  org, location, title, dates, bullets,
+}: {
+  org: string; location: string; title: string; dates: string; bullets: string[];
+}) {
+  return (
+    <div>
+      <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 className="font-heading text-2xl text-[#18160F]">{org}</h3>
+        <span className="font-mono text-xs text-[#18160F]/50 shrink-0">{location}</span>
+      </div>
+      <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
+        <p className="text-sm font-medium text-[#0D7377]">{title}</p>
+        <span className="font-mono text-xs text-[#18160F]/50 shrink-0">{dates}</span>
+      </div>
+      <ul className="mt-3 space-y-2">
+        {bullets.map((b, i) => (
+          <li key={i} className="flex gap-3 text-sm leading-6 text-[#18160F]/70">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0D7377]/40" />
+            {b}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 function Resume() {
   return (
@@ -36,18 +47,30 @@ function Resume() {
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-heading text-5xl text-[#18160F] sm:text-6xl">
-            Ayush Desai
-          </h1>
-          <p className="mt-2 text-base text-[#18160F]/60">
-            Data Science &amp; Operations · Boston, MA · desai.ayush@northeastern.edu
+          <h1 className="font-heading text-5xl text-[#18160F] sm:text-6xl">Ayush Desai</h1>
+          <p className="mt-2 text-sm text-[#18160F]/60">
+            Boston, MA&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
+            <a href="mailto:desai.ayush@northeastern.edu" className="hover:text-[#0D7377] transition-colors">
+              desai.ayush@northeastern.edu
+            </a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+            <a
+              href="https://www.linkedin.com/in/ayush-a-desai/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-[#0D7377] transition-colors"
+            >
+              LinkedIn
+            </a>
           </p>
           <p className="mt-1 text-sm text-[#0D7377]/70">
             Actively seeking full-time opportunities · Available June 2026
           </p>
         </div>
         <a
-          href="/resume.pdf"
+          href="https://drive.google.com/file/d/1AzTBxgA9yZ4Spkfeh0Eob0UEJpvMvVLr/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0D7377] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
         >
           Download PDF
@@ -74,97 +97,157 @@ function Resume() {
 
         {/* Main content */}
         <main className="space-y-16">
-          {/* Experience */}
-          <section id="experience">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Experience</p>
-
-            <div className="mt-8 space-y-10">
-              {/* Arrowstreet */}
-              <div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-heading text-2xl text-[#18160F]">
-                    Arrowstreet Capital
-                  </h3>
-                  <span className="font-mono text-xs text-[#18160F]/50">2024–2025</span>
-                </div>
-                <p className="mt-1 text-sm font-medium text-[#0D7377]">Operational Risk Co-op</p>
-                <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
-                  Built automated risk monitoring pipelines and internal reporting tools for a
-                  quantitative investment management firm. Worked across Python and SQL to surface
-                  operational exposures and streamline regulatory data workflows.
-                </p>
-              </div>
-              <hr className="border-[#18160F]/8" />
-
-              {/* Scotiabank */}
-              <div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-heading text-2xl text-[#18160F]">
-                    Scotiabank
-                  </h3>
-                  <span className="font-mono text-xs text-[#18160F]/50">2023–2024</span>
-                </div>
-                <p className="mt-1 text-sm font-medium text-[#0D7377]">Governance &amp; Reporting Co-op</p>
-                <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
-                  Supported governance and reporting workflows across global banking operations.
-                  Automated manual processes and maintained data quality standards for
-                  enterprise-level datasets across multiple divisions.
-                </p>
-              </div>
-            </div>
-          </section>
 
           {/* Education */}
-          <section id="education">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Education</p>
-            <div className="mt-8">
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 className="font-heading text-2xl text-[#18160F]">
-                  Northeastern University
-                </h3>
-                <span className="font-mono text-xs text-[#18160F]/50">2022–2026</span>
+          <Section id="education" label="Education">
+            <div className="space-y-8">
+              <div>
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 className="font-heading text-2xl text-[#18160F]">Northeastern University</h3>
+                  <span className="font-mono text-xs text-[#18160F]/50 shrink-0">Boston, MA</span>
+                </div>
+                <p className="mt-0.5 text-xs text-[#18160F]/50">D'Amore-McKim School of Business</p>
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
+                  <p className="text-sm font-medium text-[#0D7377]">
+                    Bachelor of Science in Data Science and Business Administration, Cum Laude
+                  </p>
+                  <span className="font-mono text-xs text-[#18160F]/50 shrink-0">May 2026</span>
+                </div>
+                <p className="mt-2 text-sm leading-6 text-[#18160F]/70">
+                  GPA: 3.55 · Relevant Coursework: Advanced Programming with Data, Marketing Analytics, Information Visualization
+                </p>
               </div>
-              <p className="mt-1 text-sm font-medium text-[#0D7377]">
-                Bachelor of Science in Data Science and Business Administration, Cum Laude
-              </p>
-              <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
-                Boston, MA · GPA 3.55 · Combined major spanning statistical modelling, machine learning,
-                corporate finance, and operations management.
-              </p>
+              <div>
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 className="font-heading text-xl text-[#18160F]">Northeastern University London</h3>
+                  <span className="font-mono text-xs text-[#18160F]/50 shrink-0">London, UK</span>
+                </div>
+                <p className="mt-1 text-sm font-medium text-[#0D7377]">Northeastern Study Abroad Program</p>
+              </div>
             </div>
-          </section>
+          </Section>
+
+          <hr className="border-[#18160F]/8" />
+
+          {/* Professional Experience */}
+          <Section id="experience" label="Professional Experience">
+            <div className="space-y-10">
+              <Role
+                org="Arrowstreet Capital"
+                location="Boston, MA"
+                title="Operational Risk and Control: Business Analyst Co-op"
+                dates="Jul 2025 – Dec 2025"
+                bullets={[
+                  'Conducted data validation and anomaly detection on screening datasets, removing 150+ misclassified entities and improving compliance monitoring and surveillance accuracy.',
+                  'Conducted daily KYC onboarding and review procedures, escalating high-risk cases, and ensuring compliance with internal due diligence policies.',
+                  'Executed quarterly Rule 206(4)-7 compliance testing, evaluating evidence-based control outcomes in Jira and delivering a dashboard summarizing results and remediation insights to the Head of Operational Risk.',
+                ]}
+              />
+              <hr className="border-[#18160F]/8" />
+              <Role
+                org="Scotiabank"
+                location="New York, NY"
+                title="Governance and Reporting Co-op"
+                dates="Jul 2024 – Dec 2024"
+                bullets={[
+                  'Performed a preparatory HR audit to verify processes, document workflows, and identify improvements.',
+                  'Analyzed historical data using Excel to reduce key risk indicators (KRIs) through improved control design.',
+                  'Executed two Risk and Control Self-Assessments (RCSAs) in partnership with internal control and risk teams, identifying vulnerabilities and strengthening controls to minimize residual risk in HR operations.',
+                ]}
+              />
+              <hr className="border-[#18160F]/8" />
+              <Role
+                org="Verizon"
+                location="Basking Ridge, NJ"
+                title="Analytics Intern"
+                dates="May 2024"
+                bullets={[
+                  'Collaborated with team to automate a tracing process that accelerated network diagnostics by 2000%, enabling engineers to resolve customer issues more efficiently through real-time visualization of critical network data.',
+                  'Worked alongside engineers to produce a visual UI to present tracing system\'s results to executives.',
+                ]}
+              />
+              <hr className="border-[#18160F]/8" />
+              <Role
+                org="StudyFind"
+                location="Remote"
+                title="Marketing Intern"
+                dates="May 2023 – Sep 2023"
+                bullets={[
+                  'Analyzed social media performance using Python and Excel, delivering data-driven recommendations on content strategy and posting schedules.',
+                  'Managed monthly newsletter and social media channels reaching 5,000+ subscribers, creating targeted content that drove 20%+ growth in followers and engagement rates.',
+                ]}
+              />
+              <hr className="border-[#18160F]/8" />
+              <Role
+                org="KR Contracting"
+                location="Springfield, VA"
+                title="Summer Intern"
+                dates="Jun 2023 – Aug 2023"
+                bullets={[
+                  'Created and implemented a quality assurance form, enabling security guard supervisors to efficiently enforce company policies among a workforce of more than 1,000 guards across the country.',
+                  'Conducted resume screenings and interviews to select qualified security and back-office candidates.',
+                ]}
+              />
+            </div>
+          </Section>
+
+          <hr className="border-[#18160F]/8" />
+
+          {/* Additional Experience */}
+          <Section id="additional" label="Additional Experience">
+            <div className="space-y-10">
+              <Role
+                org="Northeastern University Marketing Association"
+                location="Boston, MA"
+                title="Senior Marketing Consultant and Communications Chair"
+                dates="Jan 2024 – Apr 2025"
+                bullets={[
+                  'Designed and executed a marketing campaign for a Boston start-up, conducting market research, recommending content, and analyzing results, leading to a 50% increase in visibility across channels.',
+                  'Managed newsletter for 1,000+ readers, using analytics to boost engagement, achieving ~10% higher open rates.',
+                ]}
+              />
+              <hr className="border-[#18160F]/8" />
+              <Role
+                org="Generate Product Development"
+                location="Boston, MA"
+                title="Technical Writer"
+                dates="Jan 2024 – Apr 2024"
+                bullets={[
+                  'Designed standardized templates to streamline documentation, ensuring clarity and ease of use for engineers.',
+                  'Organized and maintained internal documents, facilitating seamless access to archives across the organization.',
+                ]}
+              />
+            </div>
+          </Section>
+
+          <hr className="border-[#18160F]/8" />
 
           {/* Skills */}
-          <section id="skills">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Skills</p>
-            <div className="mt-8 space-y-0">
-              {SKILLS.map((row, i) => (
+          <Section id="skills" label="Skills &amp; Interests">
+            <div className="space-y-0">
+              {[
+                {
+                  category: 'Skills',
+                  values: 'Python (Pandas, Matplotlib, Plotly, Polars) · R · SQL · Tableau · Jira · Excel (XLOOKUP, pivot tables, basic macros)',
+                },
+                {
+                  category: 'Interests',
+                  values: 'Painting · Baking · Hiking · Knitting · Travel · Reading',
+                },
+              ].map((row, i, arr) => (
                 <div key={row.category}>
-                  <div className="grid grid-cols-[120px_1fr] gap-6 py-4 sm:grid-cols-[160px_1fr]">
+                  <div className="grid grid-cols-[100px_1fr] gap-6 py-4 sm:grid-cols-[140px_1fr]">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#18160F]/50 pt-0.5">
                       {row.category}
                     </span>
                     <span className="text-sm leading-6 text-[#18160F]/80">{row.values}</span>
                   </div>
-                  {i < SKILLS.length - 1 && <hr className="border-[#18160F]/8" />}
+                  {i < arr.length - 1 && <hr className="border-[#18160F]/8" />}
                 </div>
               ))}
             </div>
-          </section>
+          </Section>
 
-          {/* Projects */}
-          <section id="projects">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Projects</p>
-            <div className="mt-8 space-y-8">
-              {PROJECTS_BRIEF.map((p) => (
-                <div key={p.name}>
-                  <h3 className="font-heading text-xl text-[#18160F]">{p.name}</h3>
-                  <p className="mt-1 font-mono text-xs text-[#0D7377]/70">{p.tech}</p>
-                  <p className="mt-2 text-sm leading-6 text-[#18160F]/70">{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
         </main>
       </div>
 
