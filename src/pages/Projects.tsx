@@ -132,7 +132,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
           {/* Left */}
           <div className="space-y-6">
             <div className="font-mono text-xs tracking-[0.3em] text-[#0D7377]/60">{project.num}</div>
-            <h2 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl">
+            <h2 className="font-heading text-5xl leading-tight text-[#18160F] sm:text-6xl">
               {project.name}
             </h2>
             <p className="text-base font-medium leading-7 text-[#18160F]">{project.framing}</p>
@@ -180,7 +180,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   <span className="font-mono text-xs text-[#0D7377]/50 mt-0.5 w-5 shrink-0">
                     {['i', 'ii', 'iii', 'iv', 'v'][i]}
                   </span>
-                  <p className="text-[1.0625rem] leading-6 text-[#18160F]/80">
+                  <p className="text-base leading-6 text-[#18160F]/80">
                     <strong className="font-semibold text-[#18160F]">{step.title}. </strong>
                     {step.detail}
                   </p>

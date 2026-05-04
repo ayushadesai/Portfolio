@@ -9,7 +9,7 @@ function About() {
             Operations · Strategy · Analytics
           </p>
           <div>
-            <h1 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl lg:text-6xlf">
+            <h1 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl lg:text-6xl">
               Hi, I'm <span className="italic text-[#0D7377]">Ayush Desai</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-[#18160F]/80">
@@ -144,7 +144,7 @@ function About() {
       <section className="mt-12 rounded-[2rem] bg-[#0D7377] px-8 py-10 text-white shadow-[0_24px_64px_rgba(26,61,224,0.20)]">
         <p className="text-xs uppercase tracking-[0.35em] text-[#A8D5D7]">Education</p>
         <p className="mt-4 font-heading text-2xl leading-snug sm:text-3xl">
-          Northeastern University, D'Amore-McKim — B.S. Data Science &amp; Business Administration, Cum Laude
+          Northeastern University, D'Amore-McKim, B.S. Data Science &amp; Business Administration, Cum Laude
         </p>
         <p className="mt-2 text-sm text-[#A8D5D7]">May 2026 · Boston, MA · GPA 3.55</p>
       </section>

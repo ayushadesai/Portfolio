@@ -63,7 +63,7 @@ function Resume() {
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-heading text-5xl text-[#18160F] sm:text-6xl">Ayush Desai</h1>
+          <h1 className="font-heading text-4xl text-[#18160F] sm:text-5xl">Ayush <span className="italic text-[#0D7377]">Desai</span></h1>
           <p className="mt-2 text-sm text-[#18160F]/60">
             Boston, MA&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
             <a href="mailto:desai.ayush@northeastern.edu" className="hover:text-[#0D7377] transition-colors">
@@ -101,7 +101,7 @@ function Resume() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block rounded-lg px-3 py-2 text-sm text-[#18160F]/60 transition hover:bg-[#EDE9E2] hover:text-[#18160F]"
+                className="block rounded-lg px-3 py-2 text-xs text-[#18160F]/60 transition hover:bg-[#EDE9E2] hover:text-[#18160F]"
               >
                 {item.label}
               </a>
