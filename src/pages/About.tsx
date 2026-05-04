@@ -19,7 +19,7 @@ function About() {
               operations, global banking). I work at the intersection of
               business process and data — using analytical tools to solve
               operational and strategic problems. Open to full-time roles in
-              operations, strategy, and analytics starting June 2026.
+              operations, strategy, and analytics.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -66,7 +66,7 @@ function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-[#18160F]/10 bg-white/90 p-5 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#18160F]/50">Experience</p>
-                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">3 co-ops + 2 internships</p>
+                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">2 co-ops + 3 internships</p>
               </div>
               <div className="rounded-2xl border border-[#18160F]/10 bg-white/90 p-5 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#18160F]/50">Focus Areas</p>
@@ -76,10 +76,10 @@ function About() {
             <div className="rounded-2xl border border-emerald-300 bg-emerald-50 px-5 py-4 shadow-[0_0_0_3px_rgba(16,185,129,0.10)]">
               <div className="flex items-center gap-2.5 text-sm font-semibold text-[#18160F]">
                 <span className="inline-block h-3 w-3 rounded-full bg-emerald-500 shadow-[0_0_0_4px_rgba(16,185,129,0.22)] animate-pulse" />
-                Available June 2026
+                Open to full-time opportunities
               </div>
               <p className="mt-2 text-sm leading-6 text-[#18160F]/70">
-                Open to full-time roles in operations, strategy, and analytics.
+                Roles in operations, strategy, and analytics.
               </p>
             </div>
           </div>
@@ -131,7 +131,7 @@ function About() {
           {[
             { label: 'Finance / Risk', values: 'Operational Risk · KYC/AML · Regulatory Reporting · RCSAs' },
             { label: 'Tools', values: 'Tableau · Jira · Excel · Pandas · Plotly · Polars · R' },
-            { label: 'Languages', values: 'Python · SQL · R · Java' },
+            { label: 'Languages', values: 'Python · SQL · R' },
           ].map((row) => (
             <div key={row.label} className="grid grid-cols-[140px_1fr] gap-6 px-8 py-4 sm:grid-cols-[180px_1fr]">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#18160F]/45 self-center">

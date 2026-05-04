@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 const NAV_ITEMS = [
   { label: 'Education', href: '#education' },
   { label: 'Experience', href: '#experience' },
@@ -15,14 +18,25 @@ function Section({ id, label, children }: { id: string; label: string; children:
 }
 
 function Role({
-  org, location, title, dates, bullets,
+  org, orgUrl, location, title, dates, bullets,
 }: {
-  org: string; location: string; title: string; dates: string; bullets: string[];
+  org: string; orgUrl?: string; location: string; title: string; dates: string; bullets: React.ReactNode[];
 }) {
   return (
     <div>
       <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 className="font-heading text-2xl text-[#18160F]">{org}</h3>
+        {orgUrl ? (
+          <a
+            href={orgUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="font-heading text-2xl text-[#18160F] hover:text-[#0D7377] transition-colors"
+          >
+            {org}
+          </a>
+        ) : (
+          <h3 className="font-heading text-2xl text-[#18160F]">{org}</h3>
+        )}
         <span className="font-mono text-xs text-[#18160F]/50 shrink-0">{location}</span>
       </div>
       <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
@@ -42,6 +56,8 @@ function Role({
 }
 
 function Resume() {
+  const [showEarlier, setShowEarlier] = useState(false);
+
   return (
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8">
       {/* Header */}
@@ -64,13 +80,11 @@ function Resume() {
             </a>
           </p>
           <p className="mt-1 text-sm text-[#0D7377]/70">
-            Actively seeking full-time opportunities · Available June 2026
+            Open to full-time opportunities
           </p>
         </div>
         <a
-          href="https://drive.google.com/file/d/1AzTBxgA9yZ4Spkfeh0Eob0UEJpvMvVLr/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
+          href="https://drive.google.com/uc?export=download&id=1AzTBxgA9yZ4Spkfeh0Eob0UEJpvMvVLr"
           className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0D7377] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
         >
           Download PDF
@@ -134,6 +148,7 @@ function Resume() {
             <div className="space-y-10">
               <Role
                 org="Arrowstreet Capital"
+                orgUrl="https://www.arrowstreetcapital.com"
                 location="Boston, MA"
                 title="Operational Risk and Control: Business Analyst Co-op"
                 dates="Jul 2025 – Dec 2025"
@@ -146,6 +161,7 @@ function Resume() {
               <hr className="border-[#18160F]/8" />
               <Role
                 org="Scotiabank"
+                orgUrl="https://www.scotiabank.com"
                 location="New York, NY"
                 title="Governance and Reporting Co-op"
                 dates="Jul 2024 – Dec 2024"
@@ -158,36 +174,50 @@ function Resume() {
               <hr className="border-[#18160F]/8" />
               <Role
                 org="Verizon"
+                orgUrl="https://www.verizon.com"
                 location="Basking Ridge, NJ"
                 title="Analytics Intern"
                 dates="May 2024"
                 bullets={[
                   'Collaborated with team to automate a tracing process that accelerated network diagnostics by 2000%, enabling engineers to resolve customer issues more efficiently through real-time visualization of critical network data.',
-                  'Worked alongside engineers to produce a visual UI to present tracing system\'s results to executives.',
+                  "Worked alongside engineers to produce a visual UI to present tracing system's results to executives.",
                 ]}
               />
-              <hr className="border-[#18160F]/8" />
-              <Role
-                org="StudyFind"
-                location="Remote"
-                title="Marketing Intern"
-                dates="May 2023 – Sep 2023"
-                bullets={[
-                  'Analyzed social media performance using Python and Excel, delivering data-driven recommendations on content strategy and posting schedules.',
-                  'Managed monthly newsletter and social media channels reaching 5,000+ subscribers, creating targeted content that drove 20%+ growth in followers and engagement rates.',
-                ]}
-              />
-              <hr className="border-[#18160F]/8" />
-              <Role
-                org="KR Contracting"
-                location="Springfield, VA"
-                title="Summer Intern"
-                dates="Jun 2023 – Aug 2023"
-                bullets={[
-                  'Created and implemented a quality assurance form, enabling security guard supervisors to efficiently enforce company policies among a workforce of more than 1,000 guards across the country.',
-                  'Conducted resume screenings and interviews to select qualified security and back-office candidates.',
-                ]}
-              />
+
+              {/* Earlier experience toggle */}
+              {showEarlier && (
+                <>
+                  <hr className="border-[#18160F]/8" />
+                  <Role
+                    org="StudyFind"
+                    location="Remote"
+                    title="Marketing Intern"
+                    dates="May 2023 – Sep 2023"
+                    bullets={[
+                      'Analyzed social media performance using Python and Excel, delivering data-driven recommendations on content strategy and posting schedules.',
+                      'Managed monthly newsletter and social media channels reaching 5,000+ subscribers, creating targeted content that drove 20%+ growth in followers and engagement rates.',
+                    ]}
+                  />
+                  <hr className="border-[#18160F]/8" />
+                  <Role
+                    org="KR Contracting"
+                    location="Springfield, VA"
+                    title="Summer Intern"
+                    dates="Jun 2023 – Aug 2023"
+                    bullets={[
+                      'Created and implemented a quality assurance form, enabling security guard supervisors to efficiently enforce company policies among a workforce of more than 1,000 guards across the country.',
+                      'Conducted resume screenings and interviews to select qualified security and back-office candidates.',
+                    ]}
+                  />
+                </>
+              )}
+
+              <button
+                onClick={() => setShowEarlier((v) => !v)}
+                className="text-sm font-medium text-[#0D7377] hover:text-[#0a5c60] transition-colors"
+              >
+                {showEarlier ? '− Hide earlier experience' : '+ Show earlier experience'}
+              </button>
             </div>
           </Section>
 
