@@ -42,6 +42,9 @@ function Resume() {
           <p className="mt-2 text-base text-[#18160F]/60">
             Data Science &amp; Operations · Boston, MA · desai.ayush@northeastern.edu
           </p>
+          <p className="mt-1 text-sm text-[#1A3DE0]/70">
+            Actively seeking full-time opportunities · Available June 2026
+          </p>
         </div>
         <a
           href="/resume.pdf"
@@ -101,11 +104,11 @@ function Resume() {
                   </h3>
                   <span className="font-mono text-xs text-[#18160F]/50">2023–2024</span>
                 </div>
-                <p className="mt-1 text-sm font-medium text-[#1A3DE0]">Data &amp; Operations Co-op</p>
+                <p className="mt-1 text-sm font-medium text-[#1A3DE0]">Governance &amp; Reporting Co-op</p>
                 <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
-                  Supported data operations and analytics reporting across the global banking
-                  division. Automated manual processes and maintained data quality standards for
-                  enterprise-level datasets.
+                  Supported governance and reporting workflows across global banking operations.
+                  Automated manual processes and maintained data quality standards for
+                  enterprise-level datasets across multiple divisions.
                 </p>
               </div>
             </div>
@@ -163,6 +166,27 @@ function Resume() {
             </div>
           </section>
         </main>
+      </div>
+
+      {/* Contact strip */}
+      <div className="mt-20 border-t border-[#18160F]/8 pt-10 text-center">
+        <p className="text-sm font-medium text-[#18160F]/50 uppercase tracking-[0.3em] mb-4">Let's connect</p>
+        <div className="flex justify-center gap-6">
+          <a
+            href="mailto:desai.ayush@northeastern.edu"
+            className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+          >
+            desai.ayush@northeastern.edu
+          </a>
+          <a
+            href="https://linkedin.com/in/ayushdesai"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );

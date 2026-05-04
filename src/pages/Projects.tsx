@@ -119,7 +119,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
   return (
     <>
       <div className="py-14 sm:py-16">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#18160F]/8">
           {/* Left */}
           <div className="space-y-6">
             <div className="font-mono text-xs tracking-[0.3em] text-[#1A3DE0]/60">{project.num}</div>
@@ -156,7 +156,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
           </div>
 
           {/* Right */}
-          <div>
+          <div className="lg:pl-16">
             <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#18160F]/40">
               How it was built
             </p>
@@ -166,7 +166,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   <span className="font-mono text-xs text-[#1A3DE0]/50 mt-0.5 w-5 shrink-0">
                     {['i', 'ii', 'iii', 'iv', 'v'][i]}
                   </span>
-                  <p className="text-sm leading-6 text-[#18160F]/80">
+                  <p className="text-[0.9375rem] leading-6 text-[#18160F]/80">
                     <strong className="font-semibold text-[#18160F]">{step.title}. </strong>
                     {step.detail}
                   </p>
