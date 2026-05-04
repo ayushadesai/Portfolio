@@ -58,7 +58,7 @@ const projects: Project[] = [
     description:
       'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs as they come in.',
     tech: ['FastAPI', 'React', 'PostgreSQL', 'ChromaDB', 'Vercel'],
-    liveUrl: 'https://drive.google.com/file/d/1T0AFqq5DoMQKSi3yU1m0RmdpnrE6P-EE/view?usp=sharing',
+    liveUrl: 'https://drive.google.com/file/d/1w_jZ4g3gJs37fZd8sE4lFxSliXLNKHOo/view?usp=sharing',
     liveLabel: 'Report',
     githubUrl: 'https://github.com/shruthipal/MKTG4604-VGP-Frontend',
     steps: [
