@@ -13,13 +13,11 @@ function About() {
               Hi, I'm Ayush{' '}
               <span className="italic text-[#0D7377]">Desai</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#18160F]/80">
+            <p className="mt-6 max-w-xl text-base leading-7 text-[#18160F]/80">
               Operations and analytics professional with co-op experience at
-              Arrowstreet Capital (operational risk) and Scotiabank (data
-              operations, global banking). I work at the intersection of
-              business process and data — using analytical tools to solve
-              operational and strategic problems. Open to full-time roles in
-              operations, strategy, and analytics.
+              Arrowstreet Capital and Scotiabank. I work at the intersection of
+              business process and data, using analytical tools to solve
+              operational and strategic problems.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">

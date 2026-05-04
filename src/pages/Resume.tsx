@@ -154,7 +154,7 @@ function Resume() {
                 dates="Jul 2025 – Dec 2025"
                 bullets={[
                   'Conducted data validation and anomaly detection on screening datasets, removing 150+ misclassified entities and improving compliance monitoring and surveillance accuracy.',
-                  'Conducted daily KYC onboarding and review procedures, escalating high-risk cases, and ensuring compliance with internal due diligence policies.',
+                  'Conducted daily KYC onboarding and review procedures, escalating high-risk cases in line with internal due diligence policies.',
                   'Executed quarterly Rule 206(4)-7 compliance testing, evaluating evidence-based control outcomes in Jira and delivering a dashboard summarizing results and remediation insights to the Head of Operational Risk.',
                 ]}
               />
@@ -179,7 +179,7 @@ function Resume() {
                 title="Analytics Intern"
                 dates="May 2024"
                 bullets={[
-                  'Collaborated with team to automate a tracing process that accelerated network diagnostics by 2000%, enabling engineers to resolve customer issues more efficiently through real-time visualization of critical network data.',
+                  'Collaborated with the team to automate a tracing process that accelerated network diagnostics by 2000%, giving engineers a live view of critical network data to resolve customer issues faster.',
                   "Worked alongside engineers to produce a visual UI to present tracing system's results to executives.",
                 ]}
               />
@@ -243,8 +243,8 @@ function Resume() {
                 title="Technical Writer"
                 dates="Jan 2024 – Apr 2024"
                 bullets={[
-                  'Designed standardized templates to streamline documentation, ensuring clarity and ease of use for engineers.',
-                  'Organized and maintained internal documents, facilitating seamless access to archives across the organization.',
+                  'Created standardized templates that made documentation clearer and easier for engineers to use.',
+                  'Organized and maintained internal documents so the team could find archived work quickly.',
                 ]}
               />
             </div>

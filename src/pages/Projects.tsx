@@ -45,7 +45,7 @@ const projects: Project[] = [
       {
         title: 'Shiny deployment',
         detail:
-          'Packaged the full pipeline into an R Shiny app deployed on shinyapps.io, allowing real-time listing lookup and score visualisation.',
+          'Packaged the full pipeline into an R Shiny app deployed on shinyapps.io, allowing live listing lookup and score visualisation.',
       },
     ],
   },
@@ -55,7 +55,7 @@ const projects: Project[] = [
     framing:
       'Platform connecting food businesses with nonprofits to reduce surplus inventory waste.',
     description:
-      'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs in real time.',
+      'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs as they come in.',
     tech: ['FastAPI', 'React', 'PostgreSQL', 'ChromaDB', 'Vercel'],
     liveUrl: '#',
     githubUrl: '#',
@@ -78,7 +78,7 @@ const projects: Project[] = [
       {
         title: 'React frontend',
         detail:
-          'Created a responsive React interface with real-time status updates using polling and optimistic UI patterns for donation submission and tracking.',
+          'Built a responsive React interface with status updates via polling and optimistic UI patterns for donation submission and tracking.',
       },
       {
         title: 'Vercel deployment',
