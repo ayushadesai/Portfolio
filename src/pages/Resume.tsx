@@ -171,19 +171,21 @@ function Resume() {
       {/* Contact strip */}
       <div className="mt-20 border-t border-[#18160F]/8 pt-10 text-center">
         <p className="text-sm font-medium text-[#18160F]/50 uppercase tracking-[0.3em] mb-4">Let's connect</p>
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href="mailto:desai.ayush@northeastern.edu"
-            className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
           >
+            <span className="text-[#18160F]/40">✉</span>
             desai.ayush@northeastern.edu
           </a>
           <a
-            href="https://linkedin.com/in/ayushdesai"
+            href="https://www.linkedin.com/in/ayush-a-desai/"
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
           >
+            <span className="text-[#18160F]/40">in</span>
             LinkedIn
           </a>
         </div>

@@ -22,28 +22,22 @@ function About() {
               operations, strategy, and analytics starting June 2026.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href="mailto:desai.ayush@northeastern.edu"
-              className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
             >
-              Email
+              <span className="text-[#18160F]/40">✉</span>
+              desai.ayush@northeastern.edu
             </a>
             <a
-              href="https://linkedin.com/in/ayushdesai"
+              href="https://www.linkedin.com/in/ayush-a-desai/"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
             >
+              <span className="text-[#18160F]/40">in</span>
               LinkedIn
-            </a>
-            <a
-              href="https://github.com/ayushdesai"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-[#18160F]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] shadow-sm transition hover:bg-[#EDE9E2]"
-            >
-              GitHub
             </a>
             <a
               href="/resume"
