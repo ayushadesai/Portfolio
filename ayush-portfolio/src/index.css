@@ -60,6 +60,22 @@ a {
   transform: scaleX(1);
 }
 
+/* Page transition */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .concentric-panel {
   position: absolute;
   inset: 0;
