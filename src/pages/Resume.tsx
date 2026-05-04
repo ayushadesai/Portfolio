@@ -36,19 +36,19 @@ function Resume() {
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-display text-5xl font-semibold text-[#18160F] sm:text-6xl">
+          <h1 className="font-heading text-5xl text-[#18160F] sm:text-6xl">
             Ayush Desai
           </h1>
           <p className="mt-2 text-base text-[#18160F]/60">
             Data Science &amp; Operations · Boston, MA · desai.ayush@northeastern.edu
           </p>
-          <p className="mt-1 text-sm text-[#1A3DE0]/70">
+          <p className="mt-1 text-sm text-[#0D7377]/70">
             Actively seeking full-time opportunities · Available June 2026
           </p>
         </div>
         <a
           href="/resume.pdf"
-          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#1A3DE0] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#1634c6]"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0D7377] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
         >
           Download PDF
         </a>
@@ -76,18 +76,18 @@ function Resume() {
         <main className="space-y-16">
           {/* Experience */}
           <section id="experience">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Experience</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Experience</p>
 
             <div className="mt-8 space-y-10">
               {/* Arrowstreet */}
               <div>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-display text-2xl font-semibold text-[#18160F]">
+                  <h3 className="font-heading text-2xl text-[#18160F]">
                     Arrowstreet Capital
                   </h3>
                   <span className="font-mono text-xs text-[#18160F]/50">2024–2025</span>
                 </div>
-                <p className="mt-1 text-sm font-medium text-[#1A3DE0]">Operational Risk Co-op</p>
+                <p className="mt-1 text-sm font-medium text-[#0D7377]">Operational Risk Co-op</p>
                 <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
                   Built automated risk monitoring pipelines and internal reporting tools for a
                   quantitative investment management firm. Worked across Python and SQL to surface
@@ -99,12 +99,12 @@ function Resume() {
               {/* Scotiabank */}
               <div>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-display text-2xl font-semibold text-[#18160F]">
+                  <h3 className="font-heading text-2xl text-[#18160F]">
                     Scotiabank
                   </h3>
                   <span className="font-mono text-xs text-[#18160F]/50">2023–2024</span>
                 </div>
-                <p className="mt-1 text-sm font-medium text-[#1A3DE0]">Governance &amp; Reporting Co-op</p>
+                <p className="mt-1 text-sm font-medium text-[#0D7377]">Governance &amp; Reporting Co-op</p>
                 <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
                   Supported governance and reporting workflows across global banking operations.
                   Automated manual processes and maintained data quality standards for
@@ -116,19 +116,19 @@ function Resume() {
 
           {/* Education */}
           <section id="education">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Education</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Education</p>
             <div className="mt-8">
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 className="font-display text-2xl font-semibold text-[#18160F]">
+                <h3 className="font-heading text-2xl text-[#18160F]">
                   Northeastern University
                 </h3>
                 <span className="font-mono text-xs text-[#18160F]/50">2022–2026</span>
               </div>
-              <p className="mt-1 text-sm font-medium text-[#1A3DE0]">
-                B.S. Data Science &amp; Business Administration
+              <p className="mt-1 text-sm font-medium text-[#0D7377]">
+                Bachelor of Science in Data Science and Business Administration, Cum Laude
               </p>
               <p className="mt-3 text-sm leading-6 text-[#18160F]/70">
-                Boston, MA · Combined major spanning statistical modelling, machine learning,
+                Boston, MA · GPA 3.55 · Combined major spanning statistical modelling, machine learning,
                 corporate finance, and operations management.
               </p>
             </div>
@@ -136,7 +136,7 @@ function Resume() {
 
           {/* Skills */}
           <section id="skills">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Skills</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Skills</p>
             <div className="mt-8 space-y-0">
               {SKILLS.map((row, i) => (
                 <div key={row.category}>
@@ -154,12 +154,12 @@ function Resume() {
 
           {/* Projects */}
           <section id="projects">
-            <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Projects</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Projects</p>
             <div className="mt-8 space-y-8">
               {PROJECTS_BRIEF.map((p) => (
                 <div key={p.name}>
-                  <h3 className="font-display text-xl font-semibold text-[#18160F]">{p.name}</h3>
-                  <p className="mt-1 font-mono text-xs text-[#1A3DE0]/70">{p.tech}</p>
+                  <h3 className="font-heading text-xl text-[#18160F]">{p.name}</h3>
+                  <p className="mt-1 font-mono text-xs text-[#0D7377]/70">{p.tech}</p>
                   <p className="mt-2 text-sm leading-6 text-[#18160F]/70">{p.desc}</p>
                 </div>
               ))}

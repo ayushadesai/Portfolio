@@ -5,20 +5,21 @@ function About() {
       <section className="grid min-h-[calc(100vh-72px)] gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         {/* Left */}
         <div className="space-y-8">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#1A3DE0]">
-            Data Science · Business Administration
+          <p className="text-sm uppercase tracking-[0.35em] text-[#0D7377]">
+            Operations · Strategy · Analytics
           </p>
           <div>
-            <h1 className="font-display text-5xl font-semibold leading-tight text-[#18160F] sm:text-6xl lg:text-7xl">
+            <h1 className="font-heading text-5xl leading-tight text-[#18160F] sm:text-6xl lg:text-7xl">
               Hi, I'm Ayush{' '}
-              <span className="italic text-[#1A3DE0]">Desai</span>
+              <span className="italic text-[#0D7377]">Desai</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#18160F]/80">
-              B.S. Data Science &amp; Business Administration, Northeastern
-              University, May 2026. Previously at Arrowstreet Capital
-              (operational risk co-op) and Scotiabank (data &amp; operations
-              co-op). Open to full-time roles in data, operations, and
-              quantitative finance starting June 2026.
+              Operations and analytics professional with co-op experience at
+              Arrowstreet Capital (operational risk) and Scotiabank (data
+              operations, global banking). I work at the intersection of
+              business process and data — using analytical tools to solve
+              operational and strategic problems. Open to full-time roles in
+              operations, strategy, and analytics starting June 2026.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -46,7 +47,7 @@ function About() {
             </a>
             <a
               href="/resume"
-              className="rounded-full border border-[#1A3DE0] bg-[#1A3DE0] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#1634c6]"
+              className="rounded-full border border-[#0D7377] bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
             >
               Résumé
             </a>
@@ -95,8 +96,8 @@ function About() {
       {/* Experience */}
       <section className="mt-24 space-y-8">
         <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Experience</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-[#18160F]">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Experience</p>
+          <h2 className="mt-3 font-heading text-3xl text-[#18160F]">
             Recent co-op roles
           </h2>
         </div>
@@ -106,13 +107,12 @@ function About() {
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Arrowstreet Capital</span>
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">2024–2025</span>
             </div>
-            <h3 className="mt-5 font-display text-2xl font-semibold text-[#18160F]">
+            <h3 className="mt-5 font-heading text-2xl text-[#18160F]">
               Operational Risk Co-op
             </h3>
-            <p className="mt-3 text-base leading-7 text-[#18160F]/70">
-              Built risk monitoring tools and automated reporting pipelines,
-              reducing manual reporting time significantly across a quantitative
-              investment management firm.
+            <p className="mt-3 text-[1.0625rem] leading-7 text-[#18160F]/70">
+              Managed operational risk monitoring processes and built supporting
+              reporting tools for a quantitative investment management firm.
             </p>
           </article>
           <article className="rounded-[1.75rem] border border-[#18160F]/8 bg-white p-8 shadow-sm">
@@ -120,10 +120,10 @@ function About() {
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">Scotiabank</span>
               <span className="text-xs uppercase tracking-[0.25em] text-[#18160F]/50">2023–2024</span>
             </div>
-            <h3 className="mt-5 font-display text-2xl font-semibold text-[#18160F]">
+            <h3 className="mt-5 font-heading text-2xl text-[#18160F]">
               Governance &amp; Reporting Co-op
             </h3>
-            <p className="mt-3 text-base leading-7 text-[#18160F]/70">
+            <p className="mt-3 text-[1.0625rem] leading-7 text-[#18160F]/70">
               Supported governance and reporting workflows across global banking
               operations, maintaining data quality standards across multiple
               divisions.
@@ -136,9 +136,9 @@ function About() {
       <section className="mt-12">
         <div className="divide-y divide-[#18160F]/8 rounded-[1.75rem] border border-[#18160F]/8 bg-white shadow-sm overflow-hidden">
           {[
-            { label: 'Languages', values: 'Python · R · SQL · Java' },
-            { label: 'Tools', values: 'sklearn · brms · FastAPI · React · PostgreSQL' },
             { label: 'Finance / Risk', values: 'Operational Risk · KYC/AML · Regulatory Reporting · Bayesian ML' },
+            { label: 'Tools', values: 'sklearn · brms · FastAPI · React · PostgreSQL' },
+            { label: 'Languages', values: 'Python · R · SQL · Java' },
           ].map((row) => (
             <div key={row.label} className="grid grid-cols-[140px_1fr] gap-6 px-8 py-4 sm:grid-cols-[180px_1fr]">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#18160F]/45 self-center">
@@ -151,12 +151,12 @@ function About() {
       </section>
 
       {/* Education strip */}
-      <section className="mt-12 rounded-[2rem] bg-[#1A3DE0] px-8 py-10 text-white shadow-[0_24px_64px_rgba(26,61,224,0.20)]">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#C7D4FF]">Education</p>
-        <p className="mt-4 font-display text-2xl font-semibold leading-snug sm:text-3xl">
+      <section className="mt-12 rounded-[2rem] bg-[#0D7377] px-8 py-10 text-white shadow-[0_24px_64px_rgba(26,61,224,0.20)]">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#A8D5D7]">Education</p>
+        <p className="mt-4 font-heading text-2xl leading-snug sm:text-3xl">
           Northeastern University — B.S. Data Science &amp; Business Administration
         </p>
-        <p className="mt-2 text-sm text-[#C7D4FF]">2022–2026 · Boston, MA</p>
+        <p className="mt-2 text-sm text-[#A8D5D7]">2022–2026 · Boston, MA</p>
       </section>
     </div>
   );

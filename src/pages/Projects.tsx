@@ -2,6 +2,7 @@ type Step = { title: string; detail: string };
 type Project = {
   num: string;
   name: string;
+  framing: string;
   description: string;
   tech: string[];
   liveUrl: string;
@@ -13,6 +14,8 @@ const projects: Project[] = [
   {
     num: '01',
     name: 'NYC Airbnb Ghost Listing Detector',
+    framing:
+      'Simulates how a platform trust & safety team would detect fraudulent listings using statistical modeling.',
     description:
       'A machine-learning system that identifies fraudulent or "ghost" Airbnb listings in New York City using Bayesian classification and a from-scratch neural network, with an interactive Shiny dashboard for exploration.',
     tech: ['Python', 'R', 'Bayesian ML', 'R Shiny', 'NumPy'],
@@ -49,6 +52,8 @@ const projects: Project[] = [
   {
     num: '02',
     name: 'Surplus Connect',
+    framing:
+      'Platform connecting food businesses with nonprofits to reduce surplus inventory waste.',
     description:
       'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs in real time.',
     tech: ['FastAPI', 'React', 'PostgreSQL', 'ChromaDB', 'Vercel'],
@@ -85,6 +90,8 @@ const projects: Project[] = [
   {
     num: '03',
     name: 'Gaming & Mental Health Analytics',
+    framing:
+      'Consumer behavior analytics project exploring the relationship between gaming patterns and mental health outcomes.',
     description:
       'An end-to-end analytics project exploring the relationship between gaming behaviour and self-reported mental health outcomes using clustering, association rules, and interactive Quarto reporting.',
     tech: ['Python', 'Polars', 'Plotly', 'K-Means', 'Quarto'],
@@ -122,16 +129,17 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#18160F]/8">
           {/* Left */}
           <div className="space-y-6">
-            <div className="font-mono text-xs tracking-[0.3em] text-[#1A3DE0]/60">{project.num}</div>
-            <h2 className="font-display text-4xl font-semibold leading-tight text-[#18160F] sm:text-5xl">
+            <div className="font-mono text-xs tracking-[0.3em] text-[#0D7377]/60">{project.num}</div>
+            <h2 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl">
               {project.name}
             </h2>
-            <p className="text-base leading-7 text-[#18160F]/70">{project.description}</p>
+            <p className="text-base font-medium leading-7 text-[#18160F]">{project.framing}</p>
+            <p className="text-base leading-7 text-[#18160F]/60">{project.description}</p>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full border border-[#1A3DE0]/20 bg-[#1A3DE0]/5 px-3 py-1 font-mono text-xs text-[#1A3DE0]"
+                  className="rounded-full border border-[#0D7377]/20 bg-[#0D7377]/5 px-3 py-1 font-mono text-xs text-[#0D7377]"
                 >
                   {t}
                 </span>
@@ -140,7 +148,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
             <div className="flex gap-3 pt-2">
               <a
                 href={project.liveUrl}
-                className="rounded-full bg-[#1A3DE0] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#1634c6]"
+                className="rounded-full bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#0a5c60]"
               >
                 Live
               </a>
@@ -163,10 +171,10 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
             <ol className="space-y-5">
               {project.steps.map((step, i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="font-mono text-xs text-[#1A3DE0]/50 mt-0.5 w-5 shrink-0">
+                  <span className="font-mono text-xs text-[#0D7377]/50 mt-0.5 w-5 shrink-0">
                     {['i', 'ii', 'iii', 'iv', 'v'][i]}
                   </span>
-                  <p className="text-[0.9375rem] leading-6 text-[#18160F]/80">
+                  <p className="text-[1.0625rem] leading-6 text-[#18160F]/80">
                     <strong className="font-semibold text-[#18160F]">{step.title}. </strong>
                     {step.detail}
                   </p>
@@ -185,7 +193,7 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8">
       <div className="mb-4">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#1A3DE0]">Work</p>
+        <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Work</p>
         <h1 className="mt-3 font-display text-5xl font-semibold text-[#18160F] sm:text-6xl">
           Projects
         </h1>

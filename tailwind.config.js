@@ -4,6 +4,7 @@ export default {
     extend: {
       fontFamily: {
         display: ['Cormorant Garamond', 'serif'],
+        heading: ['"DM Serif Display"', 'serif'],
         body: ['Syne', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['Inconsolata', 'ui-monospace', 'SFMono-Regular', 'monospace']
       }
