@@ -6,7 +6,8 @@ type Project = {
   description: string;
   tech: string[];
   liveUrl: string;
-  githubUrl: string;
+  liveLabel: string;
+  githubUrl?: string;
   steps: Step[];
 };
 
@@ -20,7 +21,7 @@ const projects: Project[] = [
       'A machine-learning system that identifies fraudulent or "ghost" Airbnb listings in New York City using Bayesian classification and a from-scratch neural network, with an interactive Shiny dashboard for exploration.',
     tech: ['Python', 'R', 'Bayesian ML', 'R Shiny', 'NumPy'],
     liveUrl: 'https://airbnb-analysis-ds4420.shinyapps.io/Ghost-Listings-AirBNB/',
-    githubUrl: '#',
+    liveLabel: 'Live App',
     steps: [
       {
         title: 'Data sourcing',
@@ -57,8 +58,9 @@ const projects: Project[] = [
     description:
       'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs as they come in.',
     tech: ['FastAPI', 'React', 'PostgreSQL', 'ChromaDB', 'Vercel'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://drive.google.com/file/d/1T0AFqq5DoMQKSi3yU1m0RmdpnrE6P-EE/view?usp=sharing',
+    liveLabel: 'Report',
+    githubUrl: 'https://github.com/shruthipal/MKTG4604-VGP-Frontend',
     steps: [
       {
         title: 'Problem framing',
@@ -95,8 +97,8 @@ const projects: Project[] = [
     description:
       'An end-to-end analytics project exploring the relationship between gaming behaviour and self-reported mental health outcomes using clustering, association rules, and interactive Quarto reporting.',
     tech: ['Python', 'Polars', 'Plotly', 'K-Means', 'Quarto'],
-    liveUrl: 'https://drive.google.com/file/d/1T0AFqq5DoMQKSi3yU1m0RmdpnrE6P-EE/view?usp=sharing',
-    githubUrl: 'https://drive.google.com/file/d/1w_jZ4g3gJs37fZd8sE4lFxSliXLNKHOo/view?usp=sharing',
+    liveUrl: 'https://drive.google.com/file/d/1w_jZ4g3gJs37fZd8sE4lFxSliXLNKHOo/view?usp=sharing',
+    liveLabel: 'Report',
     steps: [
       {
         title: 'Data pipeline',
@@ -148,18 +150,22 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
             <div className="flex gap-3 pt-2">
               <a
                 href={project.liveUrl}
-                className="rounded-full bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#0a5c60]"
-              >
-                Live
-              </a>
-              <a
-                href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-[#18160F]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] transition hover:bg-[#EDE9E2]"
+                className="rounded-full bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#0a5c60]"
               >
-                GitHub
+                {project.liveLabel}
               </a>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-[#18160F]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] transition hover:bg-[#EDE9E2]"
+                >
+                  GitHub
+                </a>
+              )}
             </div>
           </div>
 
