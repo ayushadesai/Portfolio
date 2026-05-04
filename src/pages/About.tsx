@@ -9,7 +9,7 @@ function About() {
             Operations · Strategy · Analytics
           </p>
           <div>
-            <h1 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl lg:text-6xl">
+            <h1 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl lg:text-6xlf">
               Hi, I'm <span className="italic text-[#0D7377]">Ayush Desai</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-[#18160F]/80">
@@ -40,7 +40,7 @@ function About() {
               href="/resume"
               className="rounded-full border border-[#0D7377] bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
             >
-              Résumé
+              Resume
             </a>
           </div>
         </div>
