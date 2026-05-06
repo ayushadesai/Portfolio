@@ -32,11 +32,10 @@ function About() {
       {/* Bridge paragraph */}
       <section className="mt-16 pb-16 border-b border-[#0F1923]/10">
         <p className="max-w-2xl text-base leading-7 text-[#0F1923]/70">
-          I've spent the last two years working across asset management and global banking —
-          validating data, stress-testing controls, and building reporting that actually gets used.
-          My work tends to sit at the intersection of process design and analytical tooling:
-          figuring out what the data says, then making it legible to the people who need to act
-          on it.
+          I've worked across asset management and global banking over the last two years, mostly
+          on data quality, controls, and reporting. I like work where you have to figure out
+          what's actually going on in a dataset or a process before you can do anything useful
+          with it.
         </p>
       </section>
 
@@ -48,7 +47,7 @@ function About() {
             {
               label: 'Operations & Analysis',
               values:
-                'Process design · Control frameworks · Governance reporting · Risk analysis · Stakeholder communication',
+                'Process design · Control testing · Governance reporting · Risk analysis · Stakeholder communication',
             },
             {
               label: 'Tools',
@@ -73,15 +72,14 @@ function About() {
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-8">About</p>
         <div className="max-w-2xl space-y-4 text-base leading-7 text-[#0F1923]/70">
           <p>
-            I'm a recent Data Science and Business Administration graduate from Northeastern
-            University. My background is genuinely split — half quantitative (statistics,
-            modeling, Python and R) and half organizational (governance, reporting, how decisions
-            actually get made). I'm drawn to roles where both sides matter, and where the goal is
-            making something work better, not just building something new.
+            Recent graduate from Northeastern University with a degree in Data Science and
+            Business Administration. My coursework and work experience split pretty evenly
+            between quantitative methods and business operations, which I've found is a useful
+            combination when the job is to make sense of something messy.
           </p>
           <p>
-            Outside of work I paint, bake, knit, hike, and read. I studied abroad in London and
-            enjoy travel. I'm open to relocating anywhere.
+            Outside of work I paint, bake, knit, and hike. I studied abroad in London and try
+            to travel when I can. Open to relocating.
           </p>
         </div>
       </section>
