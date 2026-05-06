@@ -16,37 +16,32 @@ const projects: Project[] = [
     num: '01',
     name: 'NYC Airbnb Ghost Listing Detector',
     framing:
-      'Simulates how a platform trust & safety team would detect fraudulent listings using statistical modeling.',
+      'Anomaly detection for platform risk — identifying fraudulent listings before they harm users.',
     description:
-      'A machine-learning system that identifies fraudulent or "ghost" Airbnb listings in New York City using Bayesian classification and a from-scratch neural network, with an interactive Shiny dashboard for exploration.',
-    tech: ['Python', 'R', 'Bayesian ML', 'R Shiny', 'NumPy'],
+      'Built a risk-scoring system to flag inactive or fraudulent Airbnb listings across New York City. The project simulates the kind of anomaly detection work a platform trust & safety or fraud team would run on transactional data.',
+    tech: ['Anomaly Detection', 'Risk Scoring', 'R Shiny'],
     liveUrl: 'https://airbnb-analysis-ds4420.shinyapps.io/Ghost-Listings-AirBNB/',
     liveLabel: 'Live App',
     steps: [
       {
-        title: 'Data sourcing',
+        title: 'Business problem',
         detail:
-          'Ingested and cleaned Inside Airbnb open datasets for NYC, engineering features around availability patterns and host behaviour.',
+          'Ghost listings inflate apparent supply, mislead customers, and expose a platform to reputational and regulatory risk. The goal was to identify which listings were likely fraudulent or inactive.',
       },
       {
-        title: 'Bayesian classifier',
+        title: 'Data & feature design',
         detail:
-          'Built a Naïve Bayes model in R that scores each listing\'s probability of being inactive or fraudulent based on review recency and pricing anomalies.',
+          'Sourced open Airbnb data for NYC and engineered risk signals around availability patterns, review recency, and pricing anomalies — similar to KRI construction in an ops risk context.',
       },
       {
-        title: 'NumPy neural network',
+        title: 'Risk scoring',
         detail:
-          'Implemented a two-layer feedforward neural net from scratch using NumPy, training with mini-batch gradient descent to predict ghost-listing flags.',
+          'Developed a probabilistic scoring model that assigns each listing a fraud likelihood score, enabling prioritized review rather than manual scanning of all listings.',
       },
       {
-        title: 'Recommender system',
+        title: 'Outcome',
         detail:
-          'Added a collaborative-filtering recommender that surfaces verified alternatives when a suspicious listing is detected.',
-      },
-      {
-        title: 'Shiny deployment',
-        detail:
-          'Packaged the full pipeline into an R Shiny app deployed on shinyapps.io, allowing live listing lookup and score visualisation.',
+          'Deployed as an interactive dashboard allowing reviewers to look up any listing, see its risk score, and surface verified alternatives — reducing the manual triage workload.',
       },
     ],
   },
@@ -54,10 +49,10 @@ const projects: Project[] = [
     num: '02',
     name: 'Surplus Connect',
     framing:
-      'Platform connecting food businesses with nonprofits to reduce surplus inventory waste.',
+      'Operational efficiency project matching food businesses with nonprofits to reduce surplus waste.',
     description:
-      'A full-stack platform that connects food businesses with surplus inventory to local nonprofits, using semantic vector search to match donations to needs as they come in.',
-    tech: ['FastAPI', 'React', 'PostgreSQL', 'ChromaDB', 'Vercel'],
+      'Designed and delivered a platform that connects businesses holding surplus food inventory with local nonprofits. The core challenge was an operational matching problem — how to route supply to demand quickly and accurately before inventory expires.',
+    tech: ['Operations Design', 'Analytics', 'Product'],
     liveUrl: 'https://drive.google.com/file/d/1w_jZ4g3gJs37fZd8sE4lFxSliXLNKHOo/view?usp=sharing',
     liveLabel: 'Report',
     githubUrl: 'https://github.com/shruthipal/MKTG4604-VGP-Frontend',
@@ -65,60 +60,22 @@ const projects: Project[] = [
       {
         title: 'Problem framing',
         detail:
-          'Mapped the food-waste reduction workflow and designed a data model capturing donors, recipients, and surplus listings with time-sensitive availability windows.',
+          'Mapped the end-to-end donation workflow, identifying the operational bottlenecks — manual matching, stale listings, and mismatched needs — that caused surplus to go to waste.',
       },
       {
-        title: 'FastAPI backend',
+        title: 'Matching logic',
         detail:
-          'Built a RESTful API with JWT auth, PostgreSQL persistence via SQLAlchemy, and background tasks that expire stale listings automatically.',
+          'Designed a matching system that pairs incoming surplus donations to recipient needs based on item type, quantity, and time sensitivity — improving throughput versus manual coordination.',
       },
       {
-        title: 'Semantic matching',
+        title: 'Process controls',
         detail:
-          'Embedded listing descriptions with sentence-transformers and stored vectors in ChromaDB, enabling similarity-based matching between surplus items and recipient needs.',
+          'Built in expiry windows and status tracking so listings that were not claimed in time were automatically flagged, keeping data quality high and the pipeline moving.',
       },
       {
-        title: 'React frontend',
+        title: 'Outcome',
         detail:
-          'Built a responsive React interface with status updates via polling and optimistic UI patterns for donation submission and tracking.',
-      },
-      {
-        title: 'Vercel deployment',
-        detail:
-          'Deployed the frontend to Vercel and the API to Railway, configuring environment variables and CI/CD via GitHub Actions.',
-      },
-    ],
-  },
-  {
-    num: '03',
-    name: 'Gaming & Mental Health Analytics',
-    framing:
-      'Consumer behavior analytics project exploring the relationship between gaming patterns and mental health outcomes.',
-    description:
-      'An end-to-end analytics project exploring the relationship between gaming behaviour and self-reported mental health outcomes using clustering, association rules, and interactive Quarto reporting.',
-    tech: ['Python', 'Polars', 'Plotly', 'K-Means', 'Quarto'],
-    liveUrl: 'https://drive.google.com/file/d/1T0AFqq5DoMQKSi3yU1m0RmdpnrE6P-EE/view?usp=sharing',
-    liveLabel: 'Report',
-    steps: [
-      {
-        title: 'Data pipeline',
-        detail:
-          'Built a Polars-based ETL pipeline ingesting survey data, handling missingness, and engineering features like weekly playtime bins and genre diversity scores.',
-      },
-      {
-        title: 'K-Means clustering',
-        detail:
-          'Applied K-Means (k=4) on normalised behavioural features to segment player profiles, validating cluster stability with silhouette scores.',
-      },
-      {
-        title: 'Association rules',
-        detail:
-          'Ran Apriori association-rule mining to surface high-confidence patterns between game genres, play schedules, and anxiety or depression indicators.',
-      },
-      {
-        title: 'Quarto reporting',
-        detail:
-          'Assembled findings into an interactive Quarto document with Plotly charts, published as a static HTML report for stakeholder review.',
+          'Delivered a working platform with measurable reduction in unmatched surplus, validated through stakeholder testing with nonprofit partners in the Boston area.',
       },
     ],
   },
@@ -161,7 +118,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-[#18160F]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F] transition hover:bg-[#EDE9E2]"
+                  className="rounded-full border border-[#18160F]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F]/60 transition hover:bg-[#EDE9E2]"
                 >
                   GitHub
                 </a>
@@ -172,7 +129,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
           {/* Right */}
           <div className="lg:pl-16">
             <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#18160F]/40">
-              How it was built
+              Approach
             </p>
             <ol className="space-y-5">
               {project.steps.map((step, i) => (

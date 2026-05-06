@@ -84,7 +84,8 @@ function Resume() {
           </p>
         </div>
         <a
-          href="https://drive.google.com/uc?export=download&id=1AzTBxgA9yZ4Spkfeh0Eob0UEJpvMvVLr"
+          href="https://drive.google.com/uc?export=download&id=1G3EVFXEX7NtJtNKEskMU1giWAyL_f3U6"
+          download="Desai, Ayush_Resume"
           className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0D7377] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#0a5c60]"
         >
           Download PDF

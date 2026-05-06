@@ -2,8 +2,8 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 const links = [
   { label: 'About', to: '/' },
+  { label: 'Resume', to: '/resume' },
   { label: 'Projects', to: '/projects' },
-  { label: 'Resume', to: '/resume' }
 ];
 
 function Layout() {

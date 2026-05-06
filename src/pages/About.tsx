@@ -6,7 +6,7 @@ function About() {
         {/* Left */}
         <div className="space-y-8">
           <p className="text-sm uppercase tracking-[0.35em] text-[#0D7377]">
-            Operations · Strategy · Analytics
+            Operational Risk & Compliance · Financial Services · Data-Informed
           </p>
           <div>
             <h1 className="font-heading text-4xl leading-tight text-[#18160F] sm:text-5xl lg:text-6xl">
@@ -67,7 +67,7 @@ function About() {
               </div>
               <div className="rounded-2xl border border-[#18160F]/10 bg-white/90 p-5 shadow-sm">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#18160F]/50">Focus Areas</p>
-                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">Risk, Ops, Analytics</p>
+                <p className="mt-2.5 text-sm font-semibold text-[#18160F]">Risk · Ops · Analytics · Tech</p>
               </div>
             </div>
             <div className="rounded-2xl border border-emerald-300 bg-emerald-50 px-5 py-4 shadow-[0_0_0_3px_rgba(16,185,129,0.10)]">
@@ -76,7 +76,7 @@ function About() {
                 Open to full-time opportunities
               </div>
               <p className="mt-2 text-sm leading-6 text-[#18160F]/70">
-                Roles in operations, strategy, and analytics.
+                Operations, risk, compliance, and analytics roles in financial services.
               </p>
             </div>
           </div>
@@ -126,9 +126,8 @@ function About() {
       <section className="mt-12">
         <div className="divide-y divide-[#18160F]/8 rounded-[1.75rem] border border-[#18160F]/8 bg-white shadow-sm overflow-hidden">
           {[
-            { label: 'Finance / Risk', values: 'Operational Risk · KYC/AML · Regulatory Reporting · RCSAs' },
-            { label: 'Tools', values: 'Tableau · Jira · Excel · Pandas · Plotly · Polars · R' },
-            { label: 'Languages', values: 'Python · SQL · R' },
+            { label: 'Domain', values: 'Operational Risk · KYC/AML · Regulatory Compliance · RCSAs · Governance & Reporting' },
+            { label: 'Tools', values: 'Python · SQL · Excel · R · Tableau · Jira' },
           ].map((row) => (
             <div key={row.label} className="grid grid-cols-[140px_1fr] gap-6 px-8 py-4 sm:grid-cols-[180px_1fr]">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#18160F]/45 self-center">
