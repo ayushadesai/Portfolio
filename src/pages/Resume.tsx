@@ -80,7 +80,7 @@ function Resume() {
             </a>
           </p>
           <p className="mt-1 text-sm text-[#1E3A5F]/70">
-            Open to full-time opportunities
+            B.S. Data Science &amp; Business Administration, Northeastern · May 2026
           </p>
         </div>
         <a

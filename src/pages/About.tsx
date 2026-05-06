@@ -1,60 +1,3 @@
-type ExperienceRole = {
-  org: string;
-  orgUrl?: string;
-  location: string;
-  title: string;
-  dates: string;
-  bullets: string[];
-};
-
-const EXPERIENCE: ExperienceRole[] = [
-  {
-    org: 'Arrowstreet Capital',
-    orgUrl: 'https://www.arrowstreetcapital.com',
-    location: 'Boston, MA',
-    title: 'Operational Risk & Control · Business Analyst Co-op',
-    dates: 'Jul 2025 – Dec 2025',
-    bullets: [
-      'Conducted data validation and anomaly detection on screening datasets, removing 150+ misclassified entities and improving compliance monitoring accuracy.',
-      'Executed quarterly Rule 206(4)-7 compliance testing and delivered a results dashboard to the Head of Operational Risk, summarizing control outcomes and remediation actions.',
-      'Managed daily KYC onboarding and review procedures, escalating high-risk cases in line with internal due diligence policies.',
-    ],
-  },
-  {
-    org: 'Scotiabank',
-    orgUrl: 'https://www.scotiabank.com',
-    location: 'New York, NY',
-    title: 'Governance & Reporting Co-op',
-    dates: 'Jul 2024 – Dec 2024',
-    bullets: [
-      'Executed two RCSAs in partnership with internal control teams, identifying control gaps and reducing residual risk in HR operations.',
-      'Analyzed historical data to track and reduce key risk indicators (KRIs) through improved control design.',
-      'Conducted a preparatory HR audit to verify processes, document workflows, and identify areas for improvement.',
-    ],
-  },
-  {
-    org: 'Verizon',
-    orgUrl: 'https://www.verizon.com',
-    location: 'Basking Ridge, NJ',
-    title: 'Analytics Intern',
-    dates: 'May 2024',
-    bullets: [
-      'Automated a tracing process that accelerated network diagnostics by 2000%, giving engineers a live view of critical network data.',
-      'Produced a visual UI to present tracing system results to executive stakeholders.',
-    ],
-  },
-  {
-    org: 'KR Contracting',
-    location: 'Springfield, VA',
-    title: 'Summer Intern',
-    dates: 'Jun 2023 – Aug 2023',
-    bullets: [
-      'Created a quality assurance framework enabling supervisors to enforce policies across a workforce of 1,000+ security guards nationwide.',
-      'Conducted resume screenings and structured interviews to select candidates for security and back-office roles.',
-    ],
-  },
-];
-
 function About() {
   return (
     <div className="mx-auto max-w-4xl px-6 pb-24 pt-14 lg:px-8">
@@ -62,16 +5,11 @@ function About() {
       {/* Hero */}
       <section className="pb-16 border-b border-[#0F1923]/10">
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-6">
-          Northeastern University · May 2026 · Boston, MA
+          Northeastern University · Class of 2026
         </p>
         <h1 className="font-heading text-4xl leading-tight text-[#0F1923] sm:text-5xl lg:text-[3.25rem]">
-          Operational Risk &amp; Analytics Professional
+          Operations &amp; Analytics
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-7 text-[#0F1923]/65">
-          Interdisciplinary background across asset management and global banking, with hands-on
-          experience in compliance testing, governance frameworks, KYC operations, and data-driven
-          risk reporting.
-        </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="https://drive.google.com/uc?export=download&id=11zOuSTpYdP7QhTB4nzgasAcnYDfRUsz4"
@@ -91,52 +29,26 @@ function About() {
         </div>
       </section>
 
-      {/* Experience */}
-      <section className="mt-16">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-2">Experience</p>
-        <div className="divide-y divide-[#0F1923]/8">
-          {EXPERIENCE.map((role) => (
-            <div key={role.org} className="py-10">
-              <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                {role.orgUrl ? (
-                  <a
-                    href={role.orgUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-heading text-xl text-[#0F1923] hover:text-[#1E3A5F] transition-colors"
-                  >
-                    {role.org}
-                  </a>
-                ) : (
-                  <span className="font-heading text-xl text-[#0F1923]">{role.org}</span>
-                )}
-                <span className="font-mono text-xs text-[#0F1923]/40 shrink-0">{role.location}</span>
-              </div>
-              <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
-                <p className="text-sm font-medium text-[#1E3A5F]">{role.title}</p>
-                <span className="font-mono text-xs text-[#0F1923]/40 shrink-0">{role.dates}</span>
-              </div>
-              <ul className="mt-3 space-y-2">
-                {role.bullets.map((b, i) => (
-                  <li key={i} className="flex gap-3 text-sm leading-6 text-[#0F1923]/65">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#1E3A5F]/50" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      {/* Bridge paragraph */}
+      <section className="mt-16 pb-16 border-b border-[#0F1923]/10">
+        <p className="max-w-2xl text-base leading-7 text-[#0F1923]/70">
+          I've spent the last two years working across asset management and global banking —
+          validating data, stress-testing controls, and building reporting that actually gets used.
+          My work tends to sit at the intersection of process design and analytical tooling:
+          figuring out what the data says, then making it legible to the people who need to act
+          on it.
+        </p>
       </section>
 
       {/* Skills */}
-      <section className="border-t border-[#0F1923]/10 pt-16">
+      <section className="mt-16">
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-8">Skills</p>
         <div className="divide-y divide-[#0F1923]/8 rounded-xl border border-[#0F1923]/10 bg-white overflow-hidden shadow-sm">
           {[
             {
-              label: 'Risk & Compliance',
-              values: 'Operational Risk · KYC/AML · RCSA · Rule 206(4)-7 · Governance & Reporting · Control Design',
+              label: 'Operations & Analysis',
+              values:
+                'Process design · Control frameworks · Governance reporting · Risk analysis · Stakeholder communication',
             },
             {
               label: 'Tools',
@@ -161,16 +73,15 @@ function About() {
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-8">About</p>
         <div className="max-w-2xl space-y-4 text-base leading-7 text-[#0F1923]/70">
           <p>
-            Final-year Data Science and Business Administration student at Northeastern University,
-            with co-op experience across asset management and global banking. My work sits at the
-            intersection of operational controls, governance frameworks, and analytical tooling — I
-            approach risk and compliance problems empirically, using data to surface patterns,
-            strengthen controls, and communicate findings clearly to stakeholders.
+            I'm a recent Data Science and Business Administration graduate from Northeastern
+            University. My background is genuinely split — half quantitative (statistics,
+            modeling, Python and R) and half organizational (governance, reporting, how decisions
+            actually get made). I'm drawn to roles where both sides matter, and where the goal is
+            making something work better, not just building something new.
           </p>
           <p>
-            I am comfortable switching between detailed analytical work and stakeholder-facing
-            deliverables, and I take methodical approaches to process design and documentation.
-            Outside of work, I enjoy following financial markets, travel, and hiking.
+            Outside of work I paint, bake, knit, hike, and read. I studied abroad in London and
+            enjoy travel. I'm open to relocating anywhere.
           </p>
         </div>
       </section>
