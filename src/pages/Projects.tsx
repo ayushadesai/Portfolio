@@ -85,20 +85,20 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
   return (
     <>
       <div className="py-14 sm:py-16">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#18160F]/8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#0F1923]/8">
           {/* Left */}
           <div className="space-y-6">
-            <div className="font-mono text-xs tracking-[0.3em] text-[#0D7377]/60">{project.num}</div>
-            <h2 className="font-heading text-5xl leading-tight text-[#18160F] sm:text-6xl">
+            <div className="font-mono text-xs tracking-[0.3em] text-[#1E3A5F]/60">{project.num}</div>
+            <h2 className="font-heading text-5xl leading-tight text-[#0F1923] sm:text-6xl">
               {project.name}
             </h2>
-            <p className="text-base font-medium leading-7 text-[#18160F]">{project.framing}</p>
-            <p className="text-base leading-7 text-[#18160F]/60">{project.description}</p>
+            <p className="text-base font-medium leading-7 text-[#0F1923]">{project.framing}</p>
+            <p className="text-base leading-7 text-[#0F1923]/60">{project.description}</p>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full border border-[#0D7377]/20 bg-[#0D7377]/5 px-3 py-1 font-mono text-xs text-[#0D7377]"
+                  className="rounded-full border border-[#1E3A5F]/20 bg-[#1E3A5F]/5 px-3 py-1 font-mono text-xs text-[#1E3A5F]"
                 >
                   {t}
                 </span>
@@ -109,7 +109,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-[#0D7377] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#0a5c60]"
+                className="rounded-full bg-[#1E3A5F] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#152D48]"
               >
                 {project.liveLabel}
               </a>
@@ -118,7 +118,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-[#18160F]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#18160F]/60 transition hover:bg-[#EDE9E2]"
+                  className="rounded-full border border-[#0F1923]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#0F1923]/60 transition hover:bg-[#EDE9E2]"
                 >
                   GitHub
                 </a>
@@ -128,17 +128,17 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
 
           {/* Right */}
           <div className="lg:pl-16">
-            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#18160F]/40">
+            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#0F1923]/40">
               Approach
             </p>
             <ol className="space-y-5">
               {project.steps.map((step, i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="font-mono text-xs text-[#0D7377]/50 mt-0.5 w-5 shrink-0">
+                  <span className="font-mono text-xs text-[#1E3A5F]/50 mt-0.5 w-5 shrink-0">
                     {['i', 'ii', 'iii', 'iv', 'v'][i]}
                   </span>
-                  <p className="text-base leading-6 text-[#18160F]/80">
-                    <strong className="font-semibold text-[#18160F]">{step.title}. </strong>
+                  <p className="text-base leading-6 text-[#0F1923]/80">
+                    <strong className="font-semibold text-[#0F1923]">{step.title}. </strong>
                     {step.detail}
                   </p>
                 </li>
@@ -147,7 +147,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
           </div>
         </div>
       </div>
-      {!isLast && <hr className="border-[#18160F]/10" />}
+      {!isLast && <hr className="border-[#0F1923]/10" />}
     </>
   );
 }
@@ -156,8 +156,8 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8">
       <div className="mb-4">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#0D7377]">Work</p>
-        <h1 className="mt-3 font-display text-5xl font-semibold text-[#18160F] sm:text-6xl">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]">Work</p>
+        <h1 className="mt-3 font-display text-5xl font-semibold text-[#0F1923] sm:text-6xl">
           Projects
         </h1>
       </div>
