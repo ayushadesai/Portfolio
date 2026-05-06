@@ -156,8 +156,8 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8">
       <div className="mb-4">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]">Work</p>
-        <h1 className="mt-3 font-display text-5xl font-semibold text-[#0F1923] sm:text-6xl">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60">Work</p>
+        <h1 className="mt-3 font-inter text-5xl font-semibold text-[#0F1923] sm:text-6xl">
           Projects
         </h1>
       </div>

@@ -7,7 +7,7 @@ function About() {
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-6">
           Northeastern University · Class of 2026
         </p>
-        <h1 className="font-heading text-4xl leading-tight text-[#0F1923] sm:text-5xl lg:text-[3.25rem]">
+        <h1 className="font-inter text-4xl font-semibold leading-tight text-[#0F1923] sm:text-5xl lg:text-[3.25rem]">
           Operations &amp; Analytics
         </h1>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -88,7 +88,7 @@ function About() {
       <section className="mt-16 border-t border-[#0F1923]/10 pt-16 pb-4">
         <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60 mb-6">Education</p>
         <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-          <span className="font-heading text-xl text-[#0F1923]">Northeastern University</span>
+          <span className="text-xl font-semibold text-[#0F1923]">Northeastern University</span>
           <span className="font-mono text-xs text-[#0F1923]/40 shrink-0">Boston, MA</span>
         </div>
         <p className="mt-0.5 text-xs text-[#0F1923]/40">D'Amore-McKim School of Business</p>

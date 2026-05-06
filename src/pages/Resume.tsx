@@ -11,7 +11,7 @@ const NAV_ITEMS = [
 function Section({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
   return (
     <section id={id}>
-      <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]">{label}</p>
+      <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60">{label}</p>
       <div className="mt-8">{children}</div>
     </section>
   );
