@@ -11,7 +11,7 @@ const NAV_ITEMS = [
 function Section({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
   return (
     <section id={id}>
-      <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60">{label}</p>
+      <p className="text-xs uppercase tracking-[0.35em] text-[#999999]">{label}</p>
       <div className="mt-8">{children}</div>
     </section>
   );
@@ -30,22 +30,22 @@ function Role({
             href={orgUrl}
             target="_blank"
             rel="noreferrer"
-            className="font-heading text-2xl text-[#0F1923] hover:text-[#1E3A5F] transition-colors"
+            className="font-geist font-semibold text-2xl tracking-[-0.3px] text-[#1a1a1a] hover:text-[#1E3A5F] transition-colors"
           >
             {org}
           </a>
         ) : (
-          <h3 className="font-heading text-2xl text-[#0F1923]">{org}</h3>
+          <h3 className="font-geist font-semibold text-2xl tracking-[-0.3px] text-[#1a1a1a]">{org}</h3>
         )}
-        <span className="font-mono text-xs text-[#0F1923]/50 shrink-0">{location}</span>
+        <span className="font-mono text-xs text-[#999999] shrink-0">{location}</span>
       </div>
       <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
         <p className="text-sm font-medium text-[#1E3A5F]">{title}</p>
-        <span className="font-mono text-xs text-[#0F1923]/50 shrink-0">{dates}</span>
+        <span className="font-mono text-xs text-[#999999] shrink-0">{dates}</span>
       </div>
       <ul className="mt-3 space-y-2">
         {bullets.map((b, i) => (
-          <li key={i} className="flex gap-3 text-sm leading-6 text-[#0F1923]/70">
+          <li key={i} className="flex gap-3 text-sm leading-6 text-[#444444]">
             <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#1E3A5F]/40" />
             {b}
           </li>
@@ -63,8 +63,8 @@ function Resume() {
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-heading text-4xl text-[#0F1923] sm:text-5xl">Ayush <span className="italic text-[#1E3A5F]">Desai</span></h1>
-          <p className="mt-2 text-sm text-[#0F1923]/60">
+          <h1 className="font-geist font-semibold text-4xl tracking-[-0.5px] text-[#1a1a1a] sm:text-5xl">Ayush <span className="italic text-[#1E3A5F]">Desai</span></h1>
+          <p className="mt-2 text-sm text-[#444444]">
             Boston, MA&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
             <a href="mailto:desai.ayush@northeastern.edu" className="hover:text-[#1E3A5F] transition-colors">
               desai.ayush@northeastern.edu
@@ -92,7 +92,7 @@ function Resume() {
         </a>
       </div>
 
-      <hr className="my-10 border-[#0F1923]/10" />
+      <hr className="my-10 border-[#e8e8e8]" />
 
       <div className="grid gap-10 lg:grid-cols-[200px_1fr] lg:gap-16">
         {/* Sticky sidebar */}
@@ -102,7 +102,7 @@ function Resume() {
               <a
                 key={item.href}
                 href={item.href}
-                className="block rounded-lg px-3 py-2 text-xs text-[#0F1923]/60 transition hover:bg-[#EDE9E2] hover:text-[#0F1923]"
+                className="block rounded-lg px-3 py-2 text-xs text-[#444444] transition hover:bg-[#f4f4f2] hover:text-[#1a1a1a]"
               >
                 {item.label}
               </a>
@@ -118,31 +118,31 @@ function Resume() {
             <div className="space-y-8">
               <div>
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-heading text-2xl text-[#0F1923]">Northeastern University</h3>
-                  <span className="font-mono text-xs text-[#0F1923]/50 shrink-0">Boston, MA</span>
+                  <h3 className="font-geist font-semibold text-2xl tracking-[-0.3px] text-[#1a1a1a]">Northeastern University</h3>
+                  <span className="font-mono text-xs text-[#999999] shrink-0">Boston, MA</span>
                 </div>
-                <p className="mt-0.5 text-xs text-[#0F1923]/50">D'Amore-McKim School of Business</p>
+                <p className="mt-0.5 text-xs text-[#999999]">D'Amore-McKim School of Business</p>
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between mt-1">
                   <p className="text-sm font-medium text-[#1E3A5F]">
                     Bachelor of Science in Data Science and Business Administration, Cum Laude
                   </p>
-                  <span className="font-mono text-xs text-[#0F1923]/50 shrink-0">May 2026</span>
+                  <span className="font-mono text-xs text-[#999999] shrink-0">May 2026</span>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-[#0F1923]/70">
+                <p className="mt-2 text-sm leading-6 text-[#444444]">
                   GPA: 3.55 · Relevant Coursework: Advanced Programming with Data, Marketing Analytics, Information Visualization
                 </p>
               </div>
               <div>
                 <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-heading text-xl text-[#0F1923]">Northeastern University London</h3>
-                  <span className="font-mono text-xs text-[#0F1923]/50 shrink-0">London, UK</span>
+                  <h3 className="font-geist font-semibold text-xl text-[#1a1a1a]">Northeastern University London</h3>
+                  <span className="font-mono text-xs text-[#999999] shrink-0">London, UK</span>
                 </div>
                 <p className="mt-1 text-sm font-medium text-[#1E3A5F]">Northeastern Study Abroad Program</p>
               </div>
             </div>
           </Section>
 
-          <hr className="border-[#0F1923]/8" />
+          <hr className="border-[#ebebeb]" />
 
           {/* Professional Experience */}
           <Section id="experience" label="Professional Experience">
@@ -159,7 +159,7 @@ function Resume() {
                   'Executed quarterly Rule 206(4)-7 compliance testing, evaluating evidence-based control outcomes in Jira and delivering a dashboard summarizing results and remediation insights to the Head of Operational Risk.',
                 ]}
               />
-              <hr className="border-[#0F1923]/8" />
+              <hr className="border-[#ebebeb]" />
               <Role
                 org="Scotiabank"
                 orgUrl="https://www.scotiabank.com"
@@ -172,7 +172,7 @@ function Resume() {
                   'Executed two Risk and Control Self-Assessments (RCSAs) in partnership with internal control and risk teams, identifying vulnerabilities and strengthening controls to minimize residual risk in HR operations.',
                 ]}
               />
-              <hr className="border-[#0F1923]/8" />
+              <hr className="border-[#ebebeb]" />
               <Role
                 org="Verizon"
                 orgUrl="https://www.verizon.com"
@@ -188,7 +188,7 @@ function Resume() {
               {/* Earlier experience toggle */}
               {showEarlier && (
                 <>
-                  <hr className="border-[#0F1923]/8" />
+                  <hr className="border-[#ebebeb]" />
                   <Role
                     org="StudyFind"
                     location="Remote"
@@ -199,7 +199,7 @@ function Resume() {
                       'Managed monthly newsletter and social media channels reaching 5,000+ subscribers, creating targeted content that drove 20%+ growth in followers and engagement rates.',
                     ]}
                   />
-                  <hr className="border-[#0F1923]/8" />
+                  <hr className="border-[#ebebeb]" />
                   <Role
                     org="KR Contracting"
                     location="Springfield, VA"
@@ -222,7 +222,7 @@ function Resume() {
             </div>
           </Section>
 
-          <hr className="border-[#0F1923]/8" />
+          <hr className="border-[#ebebeb]" />
 
           {/* Additional Experience */}
           <Section id="additional" label="Additional Experience">
@@ -237,7 +237,7 @@ function Resume() {
                   'Managed newsletter for 1,000+ readers, using analytics to boost engagement, achieving ~10% higher open rates.',
                 ]}
               />
-              <hr className="border-[#0F1923]/8" />
+              <hr className="border-[#ebebeb]" />
               <Role
                 org="Generate Product Development"
                 location="Boston, MA"
@@ -251,7 +251,7 @@ function Resume() {
             </div>
           </Section>
 
-          <hr className="border-[#0F1923]/8" />
+          <hr className="border-[#ebebeb]" />
 
           {/* Skills */}
           <Section id="skills" label="Skills &amp; Interests">
@@ -268,12 +268,12 @@ function Resume() {
               ].map((row, i, arr) => (
                 <div key={row.category}>
                   <div className="grid grid-cols-[100px_1fr] gap-6 py-4 sm:grid-cols-[140px_1fr]">
-                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F1923]/50 pt-0.5">
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#999999] pt-0.5">
                       {row.category}
                     </span>
-                    <span className="text-sm leading-6 text-[#0F1923]/80">{row.values}</span>
+                    <span className="text-sm leading-6 text-[#444444]">{row.values}</span>
                   </div>
-                  {i < arr.length - 1 && <hr className="border-[#0F1923]/8" />}
+                  {i < arr.length - 1 && <hr className="border-[#ebebeb]" />}
                 </div>
               ))}
             </div>
@@ -283,23 +283,23 @@ function Resume() {
       </div>
 
       {/* Contact strip */}
-      <div className="mt-20 border-t border-[#0F1923]/8 pt-10 text-center">
-        <p className="text-sm font-medium text-[#0F1923]/50 uppercase tracking-[0.3em] mb-4">Let's connect</p>
+      <div className="mt-20 border-t border-[#ebebeb] pt-10 text-center">
+        <p className="text-sm font-medium text-[#999999] uppercase tracking-[0.3em] mb-4">Let's connect</p>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
             href="mailto:desai.ayush@northeastern.edu"
-            className="inline-flex items-center gap-2 rounded-full border border-[#0F1923]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#0F1923] shadow-sm transition hover:bg-[#EDE9E2]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#e8e8e8] bg-white px-5 py-2.5 text-sm font-medium text-[#1a1a1a] shadow-sm transition hover:bg-[#f4f4f2]"
           >
-            <span className="text-[#0F1923]/40">✉</span>
+            <span className="text-[#999999]">✉</span>
             desai.ayush@northeastern.edu
           </a>
           <a
             href="https://www.linkedin.com/in/ayush-a-desai/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-[#0F1923]/10 bg-white px-5 py-2.5 text-sm font-medium text-[#0F1923] shadow-sm transition hover:bg-[#EDE9E2]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#e8e8e8] bg-white px-5 py-2.5 text-sm font-medium text-[#1a1a1a] shadow-sm transition hover:bg-[#f4f4f2]"
           >
-            <span className="text-[#0F1923]/40">in</span>
+            <span className="text-[#999999]">in</span>
             LinkedIn
           </a>
         </div>

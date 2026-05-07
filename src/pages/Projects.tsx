@@ -85,15 +85,15 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
   return (
     <>
       <div className="py-14 sm:py-16">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#0F1923]/8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#ebebeb]">
           {/* Left */}
           <div className="space-y-6">
-            <div className="font-mono text-xs tracking-[0.3em] text-[#1E3A5F]/60">{project.num}</div>
-            <h2 className="font-heading text-5xl leading-tight text-[#0F1923] sm:text-6xl">
+            <div className="font-mono text-xs tracking-[0.3em] text-[#999999]">{project.num}</div>
+            <h2 className="font-geist font-semibold text-5xl leading-tight tracking-[-1px] text-[#1a1a1a] sm:text-6xl">
               {project.name}
             </h2>
-            <p className="text-base font-medium leading-7 text-[#0F1923]">{project.framing}</p>
-            <p className="text-base leading-7 text-[#0F1923]/60">{project.description}</p>
+            <p className="text-base font-medium leading-7 text-[#1a1a1a]">{project.framing}</p>
+            <p className="text-base leading-7 text-[#444444]">{project.description}</p>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
@@ -118,7 +118,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-[#0F1923]/15 bg-white px-5 py-2.5 text-sm font-medium text-[#0F1923]/60 transition hover:bg-[#EDE9E2]"
+                  className="rounded-full border border-[#e0e0e0] bg-white px-5 py-2.5 text-sm font-medium text-[#444444] transition hover:bg-[#f4f4f2]"
                 >
                   GitHub
                 </a>
@@ -128,7 +128,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
 
           {/* Right */}
           <div className="lg:pl-16">
-            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#0F1923]/40">
+            <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#999999]">
               Approach
             </p>
             <ol className="space-y-5">
@@ -137,8 +137,8 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
                   <span className="font-mono text-xs text-[#1E3A5F]/50 mt-0.5 w-5 shrink-0">
                     {['i', 'ii', 'iii', 'iv', 'v'][i]}
                   </span>
-                  <p className="text-base leading-6 text-[#0F1923]/80">
-                    <strong className="font-semibold text-[#0F1923]">{step.title}. </strong>
+                  <p className="text-base leading-6 text-[#444444]">
+                    <strong className="font-semibold text-[#1a1a1a]">{step.title}. </strong>
                     {step.detail}
                   </p>
                 </li>
@@ -147,7 +147,7 @@ function ProjectBlock({ project, isLast }: { project: Project; isLast: boolean }
           </div>
         </div>
       </div>
-      {!isLast && <hr className="border-[#0F1923]/10" />}
+      {!isLast && <hr className="border-[#e8e8e8]" />}
     </>
   );
 }
@@ -156,8 +156,8 @@ function Projects() {
   return (
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8">
       <div className="mb-4">
-        <p className="text-xs uppercase tracking-[0.35em] text-[#1E3A5F]/60">Work</p>
-        <h1 className="mt-3 font-inter text-5xl font-semibold text-[#0F1923] sm:text-6xl">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#999999]">Work</p>
+        <h1 className="mt-3 font-geist font-semibold text-5xl tracking-[-0.5px] text-[#1a1a1a] sm:text-6xl">
           Projects
         </h1>
       </div>
