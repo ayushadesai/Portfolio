@@ -67,7 +67,7 @@ function Resume() {
           <p className="mt-2 text-sm text-[#444444]">
             Boston, MA&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
             <a href="mailto:desai.ayush@northeastern.edu" className="hover:text-[#1E3A5F] transition-colors">
-              desai.ayush@northeastern.edu
+              ayush.aditya.desai@gmail.com
             </a>
             &nbsp;&nbsp;·&nbsp;&nbsp;
             <a
@@ -287,11 +287,11 @@ function Resume() {
         <p className="text-sm font-medium text-[#999999] uppercase tracking-[0.3em] mb-4">Let's connect</p>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
-            href="mailto:desai.ayush@northeastern.edu"
+            href="mailto:ayush.aditya.desai@gmail.com"
             className="inline-flex items-center gap-2 rounded-full border border-[#e8e8e8] bg-white px-5 py-2.5 text-sm font-medium text-[#1a1a1a] shadow-sm transition hover:bg-[#f4f4f2]"
           >
             <span className="text-[#999999]">✉</span>
-            desai.ayush@northeastern.edu
+            ayush.aditya.desai@gmail.com
           </a>
           <a
             href="https://www.linkedin.com/in/ayush-a-desai/"
