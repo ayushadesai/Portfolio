@@ -10,12 +10,12 @@ Personal portfolio site built with React, TypeScript, Vite, and Tailwind CSS. De
 - Vite
 - Tailwind CSS
 - React Router v6
-- Fonts: Cormorant Garamond, Syne, Inconsolata (Google Fonts)
+- Fonts: Geist, Inter, Inconsolata (Google Fonts)
 
 ## Pages
 
 - `/` — About: bio, info card, experience cards, skills strip, education
-- `/projects` — Three featured projects with build breakdowns
+- `/projects` — Featured projects with build breakdowns
 - `/resume` — Full résumé with experience, education, skills, and projects
 
 ## Development
