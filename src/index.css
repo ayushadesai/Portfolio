@@ -33,14 +33,6 @@ a {
   text-decoration: none;
 }
 
-.font-display {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.font-heading {
-  font-family: 'DM Serif Display', serif;
-}
-
 .font-mono {
   font-family: 'Inconsolata', ui-monospace, SFMono-Regular, monospace;
 }
@@ -79,32 +71,4 @@ a {
 
 .page-enter {
   animation: fadeUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.concentric-panel {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.concentric-panel::before,
-.concentric-panel::after {
-  content: '';
-  position: absolute;
-  border-radius: 999px;
-  border: 1px solid rgba(30, 58, 95, 0.10);
-}
-
-.concentric-panel::before {
-  width: 240px;
-  height: 240px;
-  top: -40px;
-  right: -40px;
-}
-
-.concentric-panel::after {
-  width: 360px;
-  height: 360px;
-  bottom: -100px;
-  left: -100px;
 }
