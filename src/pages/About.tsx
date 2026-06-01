@@ -12,7 +12,7 @@ function About() {
         </h1>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="https://drive.google.com/uc?export=download&id=1A2Ey1_ToIYRvKTvRcw3QV2PYkFPATymI"
+            href="https://drive.google.com/uc?export=download&id=1ydL-SgcNarUb3ryALLNMIalV1BA6m1n9"
             download="Desai, Ayush_Resume"
             className="inline-flex items-center gap-2 rounded-full bg-[#1E3A5F] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#152D48]"
           >

@@ -64,7 +64,7 @@ function Resume() {
         <div>
           <h1 className="font-geist font-semibold text-4xl tracking-[-0.5px] text-[#1a1a1a] sm:text-5xl">Ayush <span className="italic text-[#1E3A5F]">Desai</span></h1>
           <p className="mt-2 text-sm text-[#444444]">
-            Boston, MA&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
+            Jersey City, NJ&nbsp;&nbsp;·&nbsp;&nbsp;(571) 290-9556&nbsp;&nbsp;·&nbsp;&nbsp;
             <a href="mailto:ayush.aditya.desai@gmail.com" className="hover:text-[#1E3A5F] transition-colors">
               ayush.aditya.desai@gmail.com
             </a>
@@ -83,7 +83,7 @@ function Resume() {
           </p>
         </div>
         <a
-          href="https://drive.google.com/uc?export=download&id=1A2Ey1_ToIYRvKTvRcw3QV2PYkFPATymI"
+          href="https://drive.google.com/uc?export=download&id=1ydL-SgcNarUb3ryALLNMIalV1BA6m1n9"
           download="Desai, Ayush_Resume"
           className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#1E3A5F] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#152D48]"
         >
