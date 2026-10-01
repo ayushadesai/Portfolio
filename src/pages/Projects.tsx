@@ -160,6 +160,9 @@ function Projects() {
         <h1 className="mt-3 font-geist font-semibold text-5xl tracking-[-0.5px] text-[#1a1a1a] sm:text-6xl">
           Projects
         </h1>
+        <p className="mt-3 text-sm text-[#1E3A5F]">
+          Applying analytics to operational decisions, process design, and people-centered problem solving.
+        </p>
       </div>
       {projects.map((p, i) => (
         <ProjectBlock key={p.num} project={p} isLast={i === projects.length - 1} />

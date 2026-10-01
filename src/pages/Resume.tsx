@@ -82,7 +82,7 @@ function Resume() {
             B.S. Data Science &amp; Business Administration, Northeastern · May 2026
           </p>
           <p className="mt-2 text-sm text-[#1E3A5F]">
-            Open to HR, People Operations, and People Analytics roles; actively interviewing for an Associate, HR Program &amp; Insights opportunity.
+            Interested in people-centered operations, stakeholder insight, and analytics-driven strategy.
           </p>
         </div>
         <a
