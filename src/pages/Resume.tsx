@@ -82,7 +82,7 @@ function Resume() {
             B.S. Data Science &amp; Business Administration, Northeastern · May 2026
           </p>
           <p className="mt-2 text-sm text-[#1E3A5F]">
-            Interested in people-centered operations, stakeholder insight, and analytics-driven strategy.
+            Interested in strengthening processes, improving oversight, and using data to support sound decisions.
           </p>
         </div>
         <a
@@ -169,9 +169,9 @@ function Resume() {
                 title="Governance and Reporting Co-op"
                 dates="Jul 2024 – Dec 2024"
                 bullets={[
-                  'Performed a preparatory HR audit to verify processes, document workflows, and identify improvements.',
+                  'Conducted a preparatory audit of internal processes, documenting workflows and identifying opportunities to strengthen consistency and controls.',
                   'Analyzed historical data using Excel to reduce key risk indicators (KRIs) through improved control design.',
-                  'Executed two Risk and Control Self-Assessments (RCSAs) in partnership with internal control and risk teams, identifying vulnerabilities and strengthening controls to minimize residual risk in HR operations.',
+                  'Executed two Risk and Control Self-Assessments (RCSAs) with internal control and risk teams, identifying vulnerabilities and strengthening controls across internal processes.',
                 ]}
               />
               <hr className="border-[#ebebeb]" />
@@ -209,7 +209,7 @@ function Resume() {
                     dates="Jun 2023 – Aug 2023"
                     bullets={[
                       'Created and implemented a quality assurance form, enabling security guard supervisors to efficiently enforce company policies among a workforce of more than 1,000 guards across the country.',
-                      'Conducted resume screenings and interviews to select qualified security and back-office candidates.',
+                      'Applied structured evaluation criteria for security and back-office positions.',
                     ]}
                   />
                 </>

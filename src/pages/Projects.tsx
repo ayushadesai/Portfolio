@@ -161,7 +161,7 @@ function Projects() {
           Projects
         </h1>
         <p className="mt-3 text-sm text-[#1E3A5F]">
-          Applying analytics to operational decisions, process design, and people-centered problem solving.
+          Applying data to process design, oversight, and sound decision-making.
         </p>
       </div>
       {projects.map((p, i) => (

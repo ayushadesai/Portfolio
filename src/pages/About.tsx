@@ -8,10 +8,10 @@ function About() {
           Northeastern University · Class of 2026
         </p>
         <h1 className="font-geist text-4xl font-semibold tracking-[-0.5px] leading-tight text-[#1a1a1a] sm:text-5xl lg:text-[3.25rem]">
-          Operations &amp; Analytics
+          Process, Controls &amp; Insight
         </h1>
         <p className="mt-5 max-w-2xl text-sm leading-6 text-[#1E3A5F]">
-          Interested in the intersection of operations, people strategy, and analytics.
+          Focused on reliable processes, thoughtful oversight, and clear, data-informed decisions.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
@@ -38,8 +38,8 @@ function About() {
           I've worked across asset management and global banking over the last two years, mostly
           on data quality, controls, and reporting. I like work where you have to figure out
           what's actually going on in a dataset or a process before you can do anything useful
-          with it. I'm especially interested in the intersection of operations, people programs,
-          and data-driven decision-making in fast-moving business environments.
+          with it. I'm drawn to work that connects dependable processes, sound oversight, and
+          data-informed decision-making in complex business environments.
         </p>
       </section>
 
